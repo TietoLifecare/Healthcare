@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Tieto.HCW.EIS.PatientDataIntegration.ServiceContracts" xmlns:urn1="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PatientDataIntegration.DataContracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:GetPatientDataRequest>
+         <urn1:MessageHeader>
+            <tiet:MessageID>?</tiet:MessageID>
+            <tiet:TransactionID>?</tiet:TransactionID>
+            <tiet:SenderID>?</tiet:SenderID>
+            <tiet:SenderApplication>?</tiet:SenderApplication>
+            <tiet:ReceiverID>Keksi</tiet:ReceiverID>
+            <tiet:ReceiverApplication>?</tiet:ReceiverApplication>
+            <tiet:CharacterSet>?</tiet:CharacterSet>
+            <tiet:DataServiceURL>?</tiet:DataServiceURL>
+            <tiet:UserLanguageCode>?</tiet:UserLanguageCode>
+            <tiet:VersionNumber>?</tiet:VersionNumber>
+         </urn1:MessageHeader>
+         <urn1:Common>
+            <tiet:ContractKey>aaabbbccc</tiet:ContractKey>
+            <tiet:UserId>tieto</tiet:UserId>
+            <tiet:CallingSystem>Keksi</tiet:CallingSystem>
+            <tiet:CallingUserId>1234</tiet:CallingUserId>
+         </urn1:Common>
+         <urn1:PatientId>
+            <tiet1:Identifier>120566-A020</tiet1:Identifier>
+         </urn1:PatientId>
+      </urn:GetPatientDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

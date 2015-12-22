@@ -1,0 +1,26 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <UpdatePatientDataResponse xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>123</a:MessageID>
+            <a:TransactionID>44</a:TransactionID>
+            <a:SenderID>Carea</a:SenderID>
+            <a:SenderApplication>PatientData</a:SenderApplication>
+            <a:ReceiverID>Keksi</a:ReceiverID>
+            <a:ReceiverApplication>Portal</a:ReceiverApplication>
+            <a:CharacterSet>abc</a:CharacterSet>
+            <a:DataServiceURL>joku.jossakin.com</a:DataServiceURL>
+            <a:UserLanguageCode>fi-FI</a:UserLanguageCode>
+            <a:VersionNumber>1</a:VersionNumber>
+         </MessageHeader>
+         <PatientId xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PatientDataIntegration.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Identifier>120566-A020</a:Identifier>
+         </PatientId>
+      </UpdatePatientDataResponse>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,346 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lif="Lifecare.Integration.PatientDataIntegration" xmlns:lif1="Lifecare.Integration.Common.Contracts" xmlns:lif2="Lifecare.Integration.PatientDataIntegration.Contracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lif:UpdatePatientDataRequest>
+         <!--Optional:-->
+         <lif:MessageHeader>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:MessageID>gero et</lif1:MessageID>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:TransactionID>sonoras imperio</lif1:TransactionID>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:SenderID>quae divum incedo</lif1:SenderID>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:SenderApplication>verrantque per auras</lif1:SenderApplication>
+            <!--type: string-->
+            <lif1:ReceiverID>per auras</lif1:ReceiverID>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:ReceiverApplication>circum claustra</lif1:ReceiverApplication>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:CharacterSet>nimborum in</lif1:CharacterSet>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:DataServiceURL>foedere certo</lif1:DataServiceURL>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:UserLanguageCode>profundum quippe ferant</lif1:UserLanguageCode>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:VersionNumber>et carcere</lif1:VersionNumber>
+         </lif:MessageHeader>
+         <!--Optional:-->
+         <lif:Common>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:ContractKey>iovis rapidum iaculata</lif1:ContractKey>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif1:CallingSystem>speluncis abdidit</lif1:CallingSystem>
+            <lif1:Area>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>bella gero et</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>flammas turbine</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>hoc metuens</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>ac vinclis</lif1:CodeDescription>
+            </lif1:Area>
+            <lif1:UserIdentifiers>
+               <!--Zero or more repetitions:-->
+               <lif1:UserIdentifier>
+                  <!--type: UserIdentifierCodeId - enumeration: [SOCIAL_SECURITY_NUMBER,SV_CODE,TERHIKKI_CODE,EFFICA_USER_ID]-->
+                  <lif1:UserIdentifierCodeId>TERHIKKI_CODE</lif1:UserIdentifierCodeId>
+                  <!--type: string-->
+                  <lif1:UserIdentifierCode>circum claustra</lif1:UserIdentifierCode>
+                  <!--type: string-->
+                  <lif1:FamilyName>coniunx una</lif1:FamilyName>
+                  <!--type: string-->
+                  <lif1:GivenNames>arce sceptra</lif1:GivenNames>
+                  <!--type: string-->
+                  <lif1:Profession>circum claustra fremunt</lif1:Profession>
+               </lif1:UserIdentifier>
+            </lif1:UserIdentifiers>
+            <lif1:Function>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>certo et premere</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>et montis</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>feta furentibus</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>sed pater</lif1:CodeDescription>
+            </lif1:Function>
+            <!--Optional:-->
+            <lif1:ReasonCode>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>talia flammato secum</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>austris aeoliam</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>sciret dare</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>dare iussus</lif1:CodeDescription>
+            </lif1:ReasonCode>
+         </lif:Common>
+         <!--Optional:-->
+         <lif:PatientUpd>
+            <!--Optional:-->
+            <lif2:PatientId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif2:Identifier>bella gero</lif2:Identifier>
+            </lif2:PatientId>
+            <!--Optional:-->
+            <!--type: boolean-->
+            <lif2:SecurityBan>true</lif2:SecurityBan>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif2:FamilyName>faciat maria</lif2:FamilyName>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif2:GivenNames>et quisquam</lif2:GivenNames>
+            <!--Optional:-->
+            <!--type: dateTime-->
+            <lif2:DateOfDeath>2016-09-11T16:29:58</lif2:DateOfDeath>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif2:Profession>infixit acuto</lif2:Profession>
+            <!--Optional:-->
+            <lif2:Sex>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>tenens mollitque animos</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>montis insuper</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>habenas ipsa</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>mollitque animos</lif1:CodeDescription>
+            </lif2:Sex>
+            <!--Optional:-->
+            <lif2:Language>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>iovisque et</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>soror et coniunx</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>iunonis adorat</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>adorat praeterea</lif1:CodeDescription>
+            </lif2:Language>
+            <!--Optional:-->
+            <lif2:Nationality>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>illum exspirantem transfixo</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>aris imponet honorem</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>aris imponet</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>premere et</lif1:CodeDescription>
+            </lif2:Nationality>
+            <!--Optional:-->
+            <lif2:HomeCity>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>insuper altos</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>ferant rapidi secum</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>nimborum in</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>vasto rex</lif1:CodeDescription>
+            </lif2:HomeCity>
+            <!--Optional:-->
+            <lif2:Addresses>
+               <!--Zero or more repetitions:-->
+               <lif2:Address>
+                  <!--type: AddressType - enumeration: [PERMANENT,TEMPORARY,OFFICE,BIRTHPLACE,UNKNOWN]-->
+                  <lif2:AddressType>OFFICE</lif2:AddressType>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <lif2:StreetAddress>aris imponet</lif2:StreetAddress>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <lif2:PostalCode>aris imponet</lif2:PostalCode>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <lif2:City>incedo regina</lif2:City>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <lif2:Country>ac vinclis</lif2:Country>
+                  <!--type: dateTime-->
+                  <lif2:PeriodStart>2011-05-05T14:49:40</lif2:PeriodStart>
+                  <!--type: dateTime-->
+                  <lif2:PeriodEnd>2006-11-30T22:00:57+02:00</lif2:PeriodEnd>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <lif2:Id>3</lif2:Id>
+               </lif2:Address>
+            </lif2:Addresses>
+            <!--Optional:-->
+            <lif2:Telephones>
+               <!--Zero or more repetitions:-->
+               <lif2:TeleAddress>
+                  <!--type: TeleAddressType - enumeration: [EMAIL,MOBILE,PHONE,OFFICE,FAX]-->
+                  <lif2:TeleAddressType>EMAIL</lif2:TeleAddressType>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <lif2:AddressValue>imposuit regemque</lif2:AddressValue>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <lif2:Id>3</lif2:Id>
+               </lif2:TeleAddress>
+            </lif2:Telephones>
+            <!--Optional:-->
+            <lif2:RecidenceCity>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>magno cum</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>iras ni faciat</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>verrantque per</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>metuens molemque</lif1:CodeDescription>
+            </lif2:RecidenceCity>
+            <!--Optional:-->
+            <lif2:BirthCity>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>dare iussus habenas</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>tempestatesque sonoras imperio</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>sceptra tenens mollitque</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>vasto rex</lif1:CodeDescription>
+            </lif2:BirthCity>
+            <!--Optional:-->
+            <lif2:MaritalStatus>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>coniunx una cum</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>rapidum iaculata</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>turbine corripuit</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>auras sed</lif1:CodeDescription>
+            </lif2:MaritalStatus>
+            <!--Optional:-->
+            <lif2:Permissions>
+               <!--Zero or more repetitions:-->
+               <lif2:Permission>
+                  <!--type: PermissionType - enumeration: [EMAIL,SMS]-->
+                  <lif2:PermissionType>EMAIL</lif2:PermissionType>
+                  <!--type: boolean-->
+                  <lif2:Allowed>false</lif2:Allowed>
+               </lif2:Permission>
+            </lif2:Permissions>
+            <!--Optional:-->
+            <lif2:LanguageOfErrand>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>aequora ventis</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>et coniunx</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>incedo regina iovisque</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>hic vasto rex</lif1:CodeDescription>
+            </lif2:LanguageOfErrand>
+            <!--Optional:-->
+            <lif2:LanguageOfInterpretation>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>ego quae</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>tempestatesque sonoras</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>ego quae divum</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>aris imponet honorem</lif1:CodeDescription>
+            </lif2:LanguageOfInterpretation>
+            <!--Optional:-->
+            <lif2:NationalityOfBirth>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetName>molemque et</lif1:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeSetId>rapidum iaculata e</lif1:CodeSetId>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeValue>nimborum in</lif1:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <lif1:CodeDescription>altos imposuit regemque</lif1:CodeDescription>
+            </lif2:NationalityOfBirth>
+            <!--Optional:-->
+            <!--type: string-->
+            <lif2:PreviousFamilyName>aeoliam venit</lif2:PreviousFamilyName>
+            <!--Optional:-->
+            <lif2:DctConsent>
+               <!--Optional:-->
+               <!--type: boolean-->
+               <lif2:ConsentValid>false</lif2:ConsentValid>
+               <!--Optional:-->
+               <!--type: dateTime-->
+               <lif2:StartDate>2016-09-21T04:23:55</lif2:StartDate>
+               <!--Optional:-->
+               <!--type: dateTime-->
+               <lif2:EndDate>2009-05-30T01:56:10+03:00</lif2:EndDate>
+            </lif2:DctConsent>
+         </lif:PatientUpd>
+      </lif:UpdatePatientDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

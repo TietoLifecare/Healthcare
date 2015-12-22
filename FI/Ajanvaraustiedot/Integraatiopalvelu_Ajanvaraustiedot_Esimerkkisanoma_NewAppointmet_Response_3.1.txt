@@ -1,0 +1,23 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <AppointmentResponse xmlns="Lifecare.Integration.ScheduleDataService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>IntegrationServices</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+      </AppointmentResponse>
+   </s:Body>
+</s:Envelope>

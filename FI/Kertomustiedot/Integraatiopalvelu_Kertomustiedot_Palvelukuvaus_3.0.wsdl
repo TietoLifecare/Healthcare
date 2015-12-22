@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="EPRDocUploadService" targetNamespace="Lifecare.Integration.EPRDocumentService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Lifecare.Integration.EPRDocumentService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.EPRDocumentService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="Lifecare.Integration.Common.Contracts"/>
+			<xs:import namespace="Lifecare.Integration.EPRDocumentService.Contracts"/>
+			<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+			<xs:element name="InsertEPRDataRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q1:MessageHeader" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q2:CommonRequestData" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Contact" nillable="true" type="q3:Contact" xmlns:q3="Lifecare.Integration.EPRDocumentService.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsertEPRDataResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q4:AcknowledgeRequestStatus" xmlns:q4="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q5:MessageHeader" xmlns:q5="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Patient" nillable="true" type="q6:PatientId" xmlns:q6="Lifecare.Integration.EPRDocumentService.Contracts"/>
+						<xs:element minOccurs="0" name="ContactId" type="q7:guid" xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/"/>
+						<xs:element minOccurs="0" name="ContactRow" type="xs:int"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetMaternalCareData_Request">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q8:MessageHeader" xmlns:q8="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q9:CommonRequestData" xmlns:q9="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientId" nillable="true" type="q10:PatientId" xmlns:q10="Lifecare.Integration.EPRDocumentService.Contracts"/>
+						<xs:element minOccurs="0" name="MaternalRequestData" nillable="true" type="q11:MaternalRequestData" xmlns:q11="Lifecare.Integration.EPRDocumentService.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetMaternalCareData_Response">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q12:AcknowledgeRequestStatus" xmlns:q12="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q13:MessageHeader" xmlns:q13="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="ContactsData" nillable="true" type="q14:ArrayOfContactData" xmlns:q14="Lifecare.Integration.EPRDocumentService.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetServiceEventData_Request">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q15:MessageHeader" xmlns:q15="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q16:CommonRequestData" xmlns:q16="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="ServiceEventReq" nillable="true" type="q17:ServiceEventReq" xmlns:q17="Lifecare.Integration.EPRDocumentService.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetServiceEventData_Response">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q18:AcknowledgeRequestStatus" xmlns:q18="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q19:MessageHeader" xmlns:q19="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="ServiceEvents" nillable="true" type="q20:ArrayOfServiceEventResp" xmlns:q20="Lifecare.Integration.EPRDocumentService.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.Common.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="Lifecare.Integration.Common.Contracts">
+			<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+			<xs:complexType name="MessageHeader">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SenderID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SenderApplication" nillable="true" type="xs:string"/>
+					<xs:element name="ReceiverID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceiverApplication" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CharacterSet" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DataServiceURL" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="UserLanguageCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="VersionNumber" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="MessageHeader" nillable="true" type="tns:MessageHeader"/>
+			<xs:complexType name="CommonRequestData">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ContractKey" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CallingSystem" nillable="true" type="xs:string"/>
+					<xs:element name="Area" nillable="true" type="tns:Code"/>
+					<xs:element name="UserIdentifiers" nillable="true" type="tns:ArrayOfUserIdentifier"/>
+					<xs:element name="Function" nillable="true" type="tns:Code"/>
+					<xs:element minOccurs="0" name="ReasonCode" nillable="true" type="tns:Code"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CommonRequestData" nillable="true" type="tns:CommonRequestData"/>
+			<xs:complexType name="Code">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CodeSetName" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeSetId" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeValue" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeDescription" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Code" nillable="true" type="tns:Code"/>
+			<xs:complexType name="ArrayOfUserIdentifier">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="UserIdentifier" nillable="true" type="tns:UserIdentifier"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfUserIdentifier" nillable="true" type="tns:ArrayOfUserIdentifier"/>
+			<xs:complexType name="UserIdentifier">
+				<xs:sequence>
+					<xs:element name="UserIdentifierCodeId" type="tns:UserIdentifierCodeId"/>
+					<xs:element name="UserIdentifierCode" nillable="true" type="xs:string"/>
+					<xs:element name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element name="GivenNames" nillable="true" type="xs:string"/>
+					<xs:element name="Profession" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="UserIdentifier" nillable="true" type="tns:UserIdentifier"/>
+			<xs:simpleType name="UserIdentifierCodeId">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="SOCIAL_SECURITY_NUMBER">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="SV_CODE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="TERHIKKI_CODE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="EFFICA_USER_ID">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="UserIdentifierCodeId" nillable="true" type="tns:UserIdentifierCodeId"/>
+			<xs:complexType name="AcknowledgeRequestStatus">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="HasOperationFailed" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="ErrorType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="AcknowledgeRequestStatus" nillable="true" type="tns:AcknowledgeRequestStatus"/>
+			<xs:complexType name="LisFaultInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Category" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="FieldValue" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="LisFaultInfo" nillable="true" type="tns:LisFaultInfo"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.EPRDocumentService.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="Lifecare.Integration.EPRDocumentService.Contracts">
+			<xs:import namespace="Lifecare.Integration.Common.Contracts"/>
+			<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+			<xs:complexType name="Contact">
+				<xs:sequence>
+					<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element name="VisitTime" nillable="true" type="xs:dateTime"/>
+					<xs:element name="ContactAuthor" nillable="true" type="q1:ArrayOfUserIdentifier" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Organisation" nillable="true" type="q2:Code" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Area" nillable="true" type="q3:Code" xmlns:q3="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Form" nillable="true" type="xs:string"/>
+					<xs:element name="Function" nillable="true" type="q4:Code" xmlns:q4="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Speciality" nillable="true" type="q5:Code" xmlns:q5="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="ServiceEvent" nillable="true" type="q6:Code" xmlns:q6="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="DataState" type="tns:DataState"/>
+					<xs:element name="CareProcesState" type="tns:CareprocessState"/>
+					<xs:element name="ContactRows" nillable="true" type="tns:ArrayOfContactRow"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Contact" nillable="true" type="tns:Contact"/>
+			<xs:complexType name="PatientId">
+				<xs:sequence>
+					<xs:element name="Identifier" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+			<xs:simpleType name="DataState">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="U"/>
+					<xs:enumeration value="F"/>
+					<xs:enumeration value="A"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="DataState" nillable="true" type="tns:DataState"/>
+			<xs:simpleType name="CareprocessState">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="TULOTILANNE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="HOIDON_SUUNNITTELU">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="HOIDON_TOTEUTUS">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="HOIDON_ARVIOINTI">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="MAARITTAMATON_HOITOPROSESSIN_VAIHE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="CareprocessState" nillable="true" type="tns:CareprocessState"/>
+			<xs:complexType name="ArrayOfContactRow">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ContactRow" nillable="true" type="tns:ContactRow"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfContactRow" nillable="true" type="tns:ArrayOfContactRow"/>
+			<xs:complexType name="ContactRow">
+				<xs:sequence>
+					<xs:element name="HeadingName" nillable="true" type="xs:string"/>
+					<xs:element name="Data" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Value" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Specifier" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ContactRow" nillable="true" type="tns:ContactRow"/>
+			<xs:complexType name="MaternalRequestData">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Area" nillable="true" type="q7:Code" xmlns:q7="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Function" nillable="true" type="q8:Code" xmlns:q8="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Organisation" nillable="true" type="q9:Code" xmlns:q9="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="UserGroup" nillable="true" type="xs:string"/>
+					<xs:element name="Form" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="MaternalRequestData" nillable="true" type="tns:MaternalRequestData"/>
+			<xs:complexType name="ArrayOfContactData">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ContactData" nillable="true" type="tns:ContactData"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfContactData" nillable="true" type="tns:ArrayOfContactData"/>
+			<xs:complexType name="ContactData">
+				<xs:sequence>
+					<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element minOccurs="0" name="VisitTime" nillable="true" type="xs:dateTime">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Organisation" nillable="true" type="q10:Code" xmlns:q10="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Area" nillable="true" type="q11:Code" xmlns:q11="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Form" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="FunctionType" nillable="true" type="q12:Code" xmlns:q12="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Function" nillable="true" type="q13:Code" xmlns:q13="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Speciality" nillable="true" type="q14:Code" xmlns:q14="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="ContactAuthor" nillable="true" type="tns:ContactDoctor">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="DataState" type="tns:DataState"/>
+					<xs:element minOccurs="0" name="CareprocesState" type="tns:CareprocessState"/>
+					<xs:element minOccurs="0" name="ServiceEventId" nillable="true" type="q15:Code" xmlns:q15="Lifecare.Integration.Common.Contracts">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="ContactHeading" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ContactRowsData" nillable="true" type="tns:ArrayOfContactRowData"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ContactData" nillable="true" type="tns:ContactData"/>
+			<xs:complexType name="ContactDoctor">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ContactDoctorCodeID" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="ContactDoctorCode" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ContactDoctor" nillable="true" type="tns:ContactDoctor"/>
+			<xs:complexType name="ArrayOfContactRowData">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ContactRowData" nillable="true" type="tns:ContactRowData"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfContactRowData" nillable="true" type="tns:ArrayOfContactRowData"/>
+			<xs:complexType name="ContactRowData">
+				<xs:complexContent mixed="false">
+					<xs:extension base="tns:ContactRow">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string">
+								<xs:annotation>
+									<xs:appinfo>
+										<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element minOccurs="0" name="CreationTime" type="xs:dateTime">
+								<xs:annotation>
+									<xs:appinfo>
+										<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element minOccurs="0" name="Modifier" nillable="true" type="xs:string">
+								<xs:annotation>
+									<xs:appinfo>
+										<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element minOccurs="0" name="ModifyTime" nillable="true" type="xs:string">
+								<xs:annotation>
+									<xs:appinfo>
+										<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element minOccurs="0" name="SubContactRows" nillable="true" type="tns:ArrayOfReturnValue">
+								<xs:annotation>
+									<xs:appinfo>
+										<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="ContactRowData" nillable="true" type="tns:ContactRowData"/>
+			<xs:complexType name="ArrayOfReturnValue">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ReturnValue" nillable="true" type="tns:ReturnValue"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfReturnValue" nillable="true" type="tns:ArrayOfReturnValue"/>
+			<xs:complexType name="ReturnValue">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ReturnValue" nillable="true" type="tns:ReturnValue"/>
+			<xs:complexType name="PreviousPregnancyChildInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="FetusCode" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="EndingOfPregnancy" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PreviousPregnancyChildInfo" nillable="true" type="tns:PreviousPregnancyChildInfo"/>
+			<xs:complexType name="PediatricExamination">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="PediatricExaminationDate" nillable="true" type="xs:dateTime">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="AbnormalValues" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="PediatricExaminer" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PediatricExamination" nillable="true" type="tns:PediatricExamination"/>
+			<xs:complexType name="PreviousPregnancyChildDetail">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ChildDetailsCode" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="ChildDetailsEnding" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PreviousPregnancyChildDetail" nillable="true" type="tns:PreviousPregnancyChildDetail"/>
+			<xs:complexType name="UltraSoundInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="FetusIdentifier" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="FetusNeckSwelling" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="UltraSoundInfo" nillable="true" type="tns:UltraSoundInfo"/>
+			<xs:complexType name="SubContactRowData">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="HeadingName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Data" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="SubContactRowData" nillable="true" type="tns:SubContactRowData"/>
+			<xs:complexType name="ServiceEventReq">
+				<xs:sequence>
+					<xs:element name="Organisation" nillable="true" type="q16:Code" xmlns:q16="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Area" nillable="true" type="q17:Code" xmlns:q17="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Function" nillable="true" type="q18:Code" xmlns:q18="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element minOccurs="0" name="RegisterType" nillable="true" type="q19:Code" xmlns:q19="Lifecare.Integration.Common.Contracts"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ServiceEventReq" nillable="true" type="tns:ServiceEventReq"/>
+			<xs:complexType name="ArrayOfServiceEventResp">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceEventResp" nillable="true" type="tns:ServiceEventResp"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfServiceEventResp" nillable="true" type="tns:ArrayOfServiceEventResp"/>
+			<xs:complexType name="ServiceEventResp">
+				<xs:sequence>
+					<xs:element name="ServiceEventId" nillable="true" type="q20:Code" xmlns:q20="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="StartDateTime" type="xs:dateTime"/>
+					<xs:element name="EndDateTime" nillable="true" type="xs:dateTime"/>
+					<xs:element name="Organisation" nillable="true" type="q21:Code" xmlns:q21="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="Area" nillable="true" type="q22:Code" xmlns:q22="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element name="RegisterType" nillable="true" type="q23:Code" xmlns:q23="Lifecare.Integration.Common.Contracts"/>
+					<xs:element name="IsSuggested" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ServiceEventResp" nillable="true" type="tns:ServiceEventResp"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="InsertEPRDataRequest">
+		<wsdl:part name="parameters" element="tns:InsertEPRDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="InsertEPRDataResponse">
+		<wsdl:part name="parameters" element="tns:InsertEPRDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="EPRDocUploadService_InsertEPRData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:LisFaultInfo" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:message name="GetMaternalCareData_Request">
+		<wsdl:part name="parameters" element="tns:GetMaternalCareData_Request"/>
+	</wsdl:message>
+	<wsdl:message name="GetMaternalCareData_Response">
+		<wsdl:part name="parameters" element="tns:GetMaternalCareData_Response"/>
+	</wsdl:message>
+	<wsdl:message name="EPRDocUploadService_GetEPRData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:LisFaultInfo" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:message name="GetServiceEventData_Request">
+		<wsdl:part name="parameters" element="tns:GetServiceEventData_Request"/>
+	</wsdl:message>
+	<wsdl:message name="GetServiceEventData_Response">
+		<wsdl:part name="parameters" element="tns:GetServiceEventData_Response"/>
+	</wsdl:message>
+	<wsdl:message name="EPRDocUploadService_GetServiceEventData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:LisFaultInfo" xmlns:q3="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:portType name="EPRDocUploadService">
+		<wsdl:operation name="InsertEPRData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/InsertEPRData" name="InsertEPRDataRequest" message="tns:InsertEPRDataRequest"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/InsertEPRDataResponse" name="InsertEPRDataResponse" message="tns:InsertEPRDataResponse"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/InsertEPRDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:EPRDocUploadService_InsertEPRData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetEPRData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetEPRData" name="GetMaternalCareData_Request" message="tns:GetMaternalCareData_Request"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetEPRDataResponse" name="GetMaternalCareData_Response" message="tns:GetMaternalCareData_Response"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetEPRDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:EPRDocUploadService_GetEPRData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetServiceEventData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetServiceEventData" name="GetServiceEventData_Request" message="tns:GetServiceEventData_Request"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetServiceEventDataResponse" name="GetServiceEventData_Response" message="tns:GetServiceEventData_Response"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetServiceEventDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:EPRDocUploadService_GetServiceEventData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_EPRDocUploadService" type="tns:EPRDocUploadService">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="InsertEPRData">
+			<soap:operation soapAction="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/InsertEPRData" style="document"/>
+			<wsdl:input name="InsertEPRDataRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="InsertEPRDataResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetEPRData">
+			<soap:operation soapAction="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetEPRData" style="document"/>
+			<wsdl:input name="GetMaternalCareData_Request">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetMaternalCareData_Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetServiceEventData">
+			<soap:operation soapAction="Lifecare.Integration.EPRDocumentService/EPRDocUploadService/GetServiceEventData" style="document"/>
+			<wsdl:input name="GetServiceEventData_Request">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetServiceEventData_Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="EPRDocUploadService">
+		<wsdl:port name="BasicHttpBinding_EPRDocUploadService" binding="tns:BasicHttpBinding_EPRDocUploadService">
+			<soap:address location="http://localhost:53946/EPRDocUploadService.svc"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

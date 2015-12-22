@@ -1,0 +1,134 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetQueueDataResponse xmlns="Lifecare.Integration.ScheduleDataService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <QueuePatients xmlns:a="Lifecare.Integration.ScheduleDataService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:QueuePatient>
+               <a:CustomerId>
+                  <a:Identifier>070171-900N</a:Identifier>
+               </a:CustomerId>
+               <a:FamilyName>Opera</a:FamilyName>
+               <a:GivenNames>Testipotilas1</a:GivenNames>
+               <a:Sex xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>AR/YDIN - Sukupuoli</b:CodeSetName>
+                  <b:CodeSetId>1.2.246.537.5.1.1997</b:CodeSetId>
+                  <b:CodeValue>2</b:CodeValue>
+                  <b:CodeDescription>Nainen</b:CodeDescription>
+               </a:Sex>
+               <a:Address>
+                  <a:AddressType>PRIMARY</a:AddressType>
+                  <a:StreetAddress>Kotikatu 1</a:StreetAddress>
+                  <a:PostalCode>60007</a:PostalCode>
+                  <a:City>SEINÄJOKI</a:City>
+               </a:Address>
+               <a:DateOfDeath/>
+               <a:Telephones/>
+               <a:QueueInfo>
+                  <a:QueueId>3132</a:QueueId>
+                  <a:QueueCode xmlns:b="Lifecare.Integration.Common.Contracts">
+                     <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                     <b:CodeSetId/>
+                     <b:CodeValue>KI/LONKKA</b:CodeValue>
+                     <b:CodeDescription/>
+                  </a:QueueCode>
+                  <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts">
+                     <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                     <b:CodeSetId/>
+                     <b:CodeValue>2203Y</b:CodeValue>
+                     <b:CodeDescription>A12  gastroenterologian osasto</b:CodeDescription>
+                  </a:CaringWard>
+                  <a:CreationDate>2015-03-13T00:00:00</a:CreationDate>
+                  <a:Resource>
+                     <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                     <a:CodeSetId/>
+                     <a:CodeValue></a:CodeValue>
+                     <a:FamilyName/>
+                     <a:GivenNames/>
+                     <a:Title/>
+                  </a:Resource>
+                  <a:Urgency xmlns:b="Lifecare.Integration.Common.Contracts">
+                     <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                     <b:CodeSetId/>
+                     <b:CodeValue>1</b:CodeValue>
+                     <b:CodeDescription>Kiireellinen, alle 31 vrk</b:CodeDescription>
+                  </a:Urgency>
+                  <a:RemovalReason xmlns:b="Lifecare.Integration.Common.Contracts">
+                     <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                     <b:CodeSetId/>
+                     <b:CodeValue/>
+                     <b:CodeDescription/>
+                  </a:RemovalReason>
+                  <a:RemovalResource>
+                     <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                     <a:CodeSetId/>
+                     <a:CodeValue/>
+                     <a:FamilyName/>
+                     <a:GivenNames/>
+                     <a:Title/>
+                  </a:RemovalResource>
+                  <a:InvitationDate></a:InvitationDate>
+                  <a:InvitationTolerance/>
+                  <a:RemarksPatient/>
+                  <a:RemarksTreatment/>
+                  <a:RemarksQueue/>
+                  <a:RemarksOperation/>
+                  <a:Receiver>
+                     <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                     <a:CodeSetId/>
+                     <a:CodeValue>20leik</a:CodeValue>
+                     <a:FamilyName>Leikkausosaston</a:FamilyName>
+                     <a:GivenNames>kirja</a:GivenNames>
+                     <a:Title/>
+                  </a:Receiver>
+                  <a:OperatingWard xmlns:b="Lifecare.Integration.Common.Contracts">
+                     <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                     <b:CodeSetId/>
+                     <b:CodeValue>4301Y</b:CodeValue>
+                     <b:CodeDescription>Leik leikkausosasto 1</b:CodeDescription>
+                  </a:OperatingWard>
+                  <a:Modifier>
+                     <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                     <a:CodeSetId/>
+                     <a:CodeValue>tieto</a:CodeValue>
+                     <a:FamilyName>Tietovirta</a:FamilyName>
+                     <a:GivenNames>Ville</a:GivenNames>
+                     <a:Title>yleislääkäri</a:Title>
+                  </a:Modifier>
+                  <a:Operations>
+                     <a:Operation>
+                        <a:OrderNumber>1</a:OrderNumber>
+                        <a:ProcedureCode>NGK05</a:ProcedureCode>
+                        <a:Side>M</a:Side>
+                     </a:Operation>
+                  </a:Operations>
+                  <a:Diagnoses>
+                     <a:Diagnose>
+                        <a:OrderNumber>1</a:OrderNumber>
+                        <a:DiagnoseCode1>M84.3</a:DiagnoseCode1>
+                        <a:Ast></a:Ast>
+                        <a:DiagnoseCode2></a:DiagnoseCode2>
+                     </a:Diagnose>
+                  </a:Diagnoses>
+               </a:QueueInfo>
+               <a:Appointments/>
+            </a:QueuePatient>
+         </QueuePatients>
+      </GetQueueDataResponse>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetDiagnosisDataResponse xmlns="http://tempuri.org/">
+         <AcknowledgeRequestStatus xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>gero et</a:MessageID>
+            <a:TransactionID>sonoras imperio</a:TransactionID>
+            <a:SenderID>per auras</a:SenderID>
+            <a:SenderApplication>circum claustra</a:SenderApplication>
+            <a:ReceiverID>quae divum incedo</a:ReceiverID>
+            <a:ReceiverApplication>verrantque per auras</a:ReceiverApplication>
+            <a:CharacterSet>nimborum in</a:CharacterSet>
+            <a:DataServiceURL>foedere certo</a:DataServiceURL>
+            <a:UserLanguageCode>profundum quippe ferant</a:UserLanguageCode>
+            <a:VersionNumber>et carcere</a:VersionNumber>
+         </MessageHeader>
+         <PatientId xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Diagnosis.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Identifier>010101-0101</a:Identifier>
+         </PatientId>
+         <Diagnoses xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Diagnosis.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Diagnose>
+               <a:Doctor/>
+               <a:Diagnosis>
+                  <a:CodeSetName>Stakes - Tautiluokitus ICD-10</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.6.1</a:CodeSetId>
+                  <a:CodeValue>A00.0</a:CodeValue>
+                  <a:CodeDescription>Klassinen kolera</a:CodeDescription>
+                  <a:Code1>A00.0</a:Code1>
+                  <a:Ast/>
+                  <a:Code2/>
+                  <a:Language>fi</a:Language>
+                  <a:Permanent>false</a:Permanent>
+                  <a:DiagnosisType>TYO</a:DiagnosisType>
+               </a:Diagnosis>
+               <a:EffectiveTime>
+                  <a:StartDateTime>2012-03-15T00:00:00</a:StartDateTime>
+                  <a:EndDateTime>9999-12-31T23:59:59.9999999</a:EndDateTime>
+               </a:EffectiveTime>
+            </a:Diagnose>
+            <a:Diagnose>
+               <a:Doctor/>
+               <a:Diagnosis>
+                  <a:CodeSetName>Stakes - Tautiluokitus ICD-10</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.6.1</a:CodeSetId>
+                  <a:CodeValue>A00.0</a:CodeValue>
+                  <a:CodeDescription>Klassinen kolera</a:CodeDescription>
+                  <a:Code1>A00.0</a:Code1>
+                  <a:Ast/>
+                  <a:Code2/>
+                  <a:Language>fi</a:Language>
+                  <a:Permanent>false</a:Permanent>
+                  <a:DiagnosisType>TYO</a:DiagnosisType>
+               </a:Diagnosis>
+               <a:EffectiveTime>
+                  <a:StartDateTime>2012-03-15T00:00:00</a:StartDateTime>
+                  <a:EndDateTime>9999-12-31T23:59:59.9999999</a:EndDateTime>
+               </a:EffectiveTime>
+            </a:Diagnose>
+            <a:Diagnose>
+               <a:Doctor/>
+               <a:Diagnosis>
+                  <a:CodeSetName>Stakes - Tautiluokitus ICD-10</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.6.1</a:CodeSetId>
+                  <a:CodeValue>A00.1</a:CodeValue>
+                  <a:CodeDescription>El Tor-kolera</a:CodeDescription>
+                  <a:Code1>A00.1</a:Code1>
+                  <a:Ast/>
+                  <a:Code2/>
+                  <a:Language>fi</a:Language>
+                  <a:Permanent>false</a:Permanent>
+                  <a:DiagnosisType>TYO</a:DiagnosisType>
+               </a:Diagnosis>
+               <a:EffectiveTime>
+                  <a:StartDateTime>2012-03-15T00:00:00</a:StartDateTime>
+                  <a:EndDateTime>9999-12-31T23:59:59.9999999</a:EndDateTime>
+               </a:EffectiveTime>
+            </a:Diagnose>
+            <a:Diagnose>
+               <a:Doctor>
+                  <a:FamilyName>Tietovirta</a:FamilyName>
+                  <a:GivenNames>Tiina</a:GivenNames>
+                  <a:DoctorId>123456</a:DoctorId>
+                  <a:Profession>Terveyskeskuslääkäri</a:Profession>
+               </a:Doctor>
+               <a:Diagnosis>
+                  <a:CodeSetName>Stakes - Tautiluokitus ICD-10</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.6.1</a:CodeSetId>
+                  <a:CodeValue>E00.2</a:CodeValue>
+                  <a:CodeDescription>Sekatyyppinen synnynnäinen jodinpuuteoireyhtymä</a:CodeDescription>
+                  <a:Code1>E00.2</a:Code1>
+                  <a:Ast/>
+                  <a:Code2/>
+                  <a:Language>fi</a:Language>
+                  <a:Permanent>false</a:Permanent>
+                  <a:DiagnosisType/>
+               </a:Diagnosis>
+               <a:EffectiveTime>
+                  <a:StartDateTime>2008-12-18T14:42:00</a:StartDateTime>
+                  <a:EndDateTime>9999-12-31T23:59:59.9999999</a:EndDateTime>
+               </a:EffectiveTime>
+            </a:Diagnose>
+            <a:Diagnose>
+               <a:Doctor>
+                  <a:FamilyName>Tietovirta</a:FamilyName>
+                  <a:GivenNames>Tiina</a:GivenNames>
+                  <a:DoctorId>123456</a:DoctorId>
+                  <a:Profession>Terveyskeskuslääkäri</a:Profession>
+               </a:Doctor>
+               <a:Diagnosis>
+                  <a:CodeSetName>Stakes - Tautiluokitus ICD-10</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.6.1</a:CodeSetId>
+                  <a:CodeValue>H30.0</a:CodeValue>
+                  <a:CodeDescription>Pesäkkeinen suoni- ja verkkokalvotulehdus</a:CodeDescription>
+                  <a:Code1>H30.0</a:Code1>
+                  <a:Ast/>
+                  <a:Code2/>
+                  <a:Language>fi</a:Language>
+                  <a:Permanent>false</a:Permanent>
+                  <a:DiagnosisType/>
+               </a:Diagnosis>
+               <a:EffectiveTime>
+                  <a:StartDateTime>2009-01-16T12:07:00</a:StartDateTime>
+                  <a:EndDateTime>9999-12-31T23:59:59.9999999</a:EndDateTime>
+               </a:EffectiveTime>
+            </a:Diagnose>
+         </Diagnoses>
+      </GetDiagnosisDataResponse>
+   </s:Body>
+</s:Envelope>

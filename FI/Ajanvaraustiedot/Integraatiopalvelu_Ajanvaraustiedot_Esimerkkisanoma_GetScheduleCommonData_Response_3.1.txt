@@ -1,0 +1,220 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetScheduleDataCommonResponse xmlns="Lifecare.Integration.ScheduleDataService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <Schedule xmlns:a="Lifecare.Integration.ScheduleDataService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Schedule>
+               <a:ScheduleId xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>integr</b:CodeValue>
+               </a:ScheduleId>
+               <a:Slots>
+                  <a:Slot>
+                     <a:SlotId>95c8e758-8cf6-4347-9dbd-584487ba1769</a:SlotId>
+                     <a:Status>Booked</a:Status>
+                     <a:StartDateTime>2015-06-11T12:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-06-11T12:30:00</a:EndDateTime>
+                     <a:TimeSlot>30</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hammas</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hhkes</b:CodeValue>
+                        <b:CodeDescription>Keskustan hammashoitola</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hlvo</b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue/>
+                        <b:CodeDescription/>
+                     </a:VisitType>
+                     <a:CustomerId>
+                        <a:Identifier>010210AA020</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hamtes</a:CodeValue>
+                        <a:CodeDescription>Hammas Testaaja</a:CodeDescription>
+                        <a:Title/>
+                     </a:Resource>
+                     <a:ChangeTime>2015-06-10T12:12:31</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:QueueData>
+                        <a:QueueId>0</a:QueueId>
+                        <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:QueueType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Urgency xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Resource>
+                           <a:CodeSetName i:nil="true"/>
+                           <a:CodeSetId i:nil="true"/>
+                           <a:CodeValue i:nil="true"/>
+                           <a:CodeDescription i:nil="true"/>
+                           <a:Title i:nil="true"/>
+                        </a:Resource>
+                        <a:CreationDate>0001-01-01T00:00:00</a:CreationDate>
+                        <a:RemarksTreatment i:nil="true"/>
+                        <a:Operations/>
+                        <a:Diagnoses/>
+                     </a:QueueData>
+                  </a:Slot>
+                  <a:Slot>
+                     <a:SlotId>edb9ca89-180c-4aee-813a-6b307c9ee6c0</a:SlotId>
+                     <a:Status>Booked</a:Status>
+                     <a:StartDateTime>2015-06-11T10:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-06-11T10:30:00</a:EndDateTime>
+                     <a:TimeSlot>30</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hammas</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hhkes</b:CodeValue>
+                        <b:CodeDescription>Keskustan hammashoitola</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hlvo</b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue/>
+                        <b:CodeDescription/>
+                     </a:VisitType>
+                     <a:CustomerId>
+                        <a:Identifier>120545-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hamtes</a:CodeValue>
+                        <a:CodeDescription>Hammas Testaaja</a:CodeDescription>
+                        <a:Title/>
+                     </a:Resource>
+                     <a:ChangeTime>2015-06-10T12:40:08</a:ChangeTime>
+                     <a:AdditionalData>IntegrationServices/10.06.2015/Lisätty integraation kautta</a:AdditionalData>
+                     <a:QueueData>
+                        <a:QueueId>0</a:QueueId>
+                        <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:QueueType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Urgency xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Resource>
+                           <a:CodeSetName i:nil="true"/>
+                           <a:CodeSetId i:nil="true"/>
+                           <a:CodeValue i:nil="true"/>
+                           <a:CodeDescription i:nil="true"/>
+                           <a:Title i:nil="true"/>
+                        </a:Resource>
+                        <a:CreationDate>0001-01-01T00:00:00</a:CreationDate>
+                        <a:RemarksTreatment i:nil="true"/>
+                        <a:Operations/>
+                        <a:Diagnoses/>
+                     </a:QueueData>
+                  </a:Slot>
+                  <a:Slot>
+                     <a:SlotId>dc609d8e-137e-4e1b-b8b3-796dcf28fd26</a:SlotId>
+                     <a:Status>Booked</a:Status>
+                     <a:StartDateTime>2015-06-10T14:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-06-10T14:30:00</a:EndDateTime>
+                     <a:TimeSlot>30</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hammas</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>hhkes</b:CodeValue>
+                        <b:CodeDescription>Keskustan hammashoitola</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>kontr</b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue/>
+                        <b:CodeDescription/>
+                     </a:VisitType>
+                     <a:CustomerId>
+                        <a:Identifier>150261-A020</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hamtes</a:CodeValue>
+                        <a:CodeDescription>Hammas Testaaja</a:CodeDescription>
+                        <a:Title/>
+                     </a:Resource>
+                     <a:ChangeTime>2015-06-10T12:11:37</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:QueueData>
+                        <a:QueueId>0</a:QueueId>
+                        <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:QueueType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Urgency xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                        <a:Resource>
+                           <a:CodeSetName i:nil="true"/>
+                           <a:CodeSetId i:nil="true"/>
+                           <a:CodeValue i:nil="true"/>
+                           <a:CodeDescription i:nil="true"/>
+                           <a:Title i:nil="true"/>
+                        </a:Resource>
+                        <a:CreationDate>0001-01-01T00:00:00</a:CreationDate>
+                        <a:RemarksTreatment i:nil="true"/>
+                        <a:Operations/>
+                        <a:Diagnoses/>
+                     </a:QueueData>
+                  </a:Slot>
+               </a:Slots>
+            </a:Schedule>
+         </Schedule>
+      </GetScheduleDataCommonResponse>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,35 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetCodeServiceDataResponse xmlns="urn:Tieto.HCW.EIS.CodeService.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.CodeService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.CodeService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <IntegrationCodeService xmlns="urn:Tieto.HCW.EIS.CodeService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.CodeService.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Code>
+               <a:Code>
+                  <a:CodeSetName>KH</a:CodeSetName>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue>khater</a:CodeValue>
+                  <a:CodeDescription>Kotiinkuljetettu ateria</a:CodeDescription>
+                  <a:BeginDate>2013-01-01T00:00:00</a:BeginDate>
+                  <a:EndDate>2013-12-31T00:00:00</a:EndDate>
+               </a:Code>
+            </a:Code>
+         </IntegrationCodeService>
+      </GetCodeServiceDataResponse>
+   </s:Body>
+</s:Envelope>

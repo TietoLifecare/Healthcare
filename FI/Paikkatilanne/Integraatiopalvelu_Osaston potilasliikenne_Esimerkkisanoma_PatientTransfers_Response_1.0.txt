@@ -1,0 +1,56 @@
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetPatientTransfersDataResponse xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <PatientTransfers xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PaikkatilanneService.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Registrations>
+               <a:Registration>
+                  <a:Type>SisaanKirjaus</a:Type>
+                  <a:PatientInfo>
+                     <a:SSN>190860-A010</a:SSN>
+                     <a:FamilyName>Testi</a:FamilyName>
+                     <a:GivenNames>Nelonen</a:GivenNames>
+                     <a:Diagnoses>
+                        <a:Diagnose>
+                           <a:Code1>H67.8</a:Code1>
+                           <a:AST>*</a:AST>
+                           <a:Code2>J10.8</a:Code2>
+                           <a:Explanation>Influenssaan liittyvä välikorvatulehdus, tunnistettu influenssavirus</a:Explanation>
+                           <a:Type>PÄÄ</a:Type>
+                        </a:Diagnose>
+                     </a:Diagnoses>
+                  </a:PatientInfo>
+                  <a:SendingUnit>
+                     <a:Organization/>
+                     <a:Ward/>
+                     <a:WardName/>
+                  </a:SendingUnit>
+                  <a:ReceivingUnit>
+                     <a:Organization>4031700001</a:Organization>
+                     <a:Ward>2203Y</a:Ward>
+                     <a:WardName>A12  gastroenterologian osasto</a:WardName>
+                  </a:ReceivingUnit>
+                  <a:TransferTime>2013-04-15T12:59:57</a:TransferTime>
+               </a:Registration>
+            </a:Registrations>
+            <a:Timestamp>2013-05-29T12:04:28</a:Timestamp>
+         </PatientTransfers>
+      </GetPatientTransfersDataResponse>
+   </s:Body>

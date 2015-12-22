@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetMedicationDataResponse xmlns="http://tempuri.org/">
+         <AcknowledgeRequestStatus xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <PatientMedications xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Medication.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:PatientMedication>
+               <a:ActivityTime>2005-04-15T10:42:15</a:ActivityTime>
+               <a:Authority>KHAAIR</a:Authority>
+               <a:BeginTime>2005-04-15T00:00:00</a:BeginTime>
+               <a:DeliveryRoute>
+                  <a:Code/>
+                  <a:Description i:nil="true"/>
+               </a:DeliveryRoute>
+               <a:Dosages>
+                  <a:Dosage>
+                     <a:Authority>KHAAIR</a:Authority>
+                     <a:DosageBeginTime>2005-04-15T00:00:00</a:DosageBeginTime>
+                     <a:DosageEndTime i:nil="true"/>
+                     <a:DosageForm i:nil="true"/>
+                     <a:DosageId>0111E660-E658-4D10-941B-9D503DB69808</a:DosageId>
+                     <a:DosageNotes i:nil="true"/>
+                     <a:DosageShortForm>1x2</a:DosageShortForm>
+                     <a:DosageText/>
+                     <a:MedicationType>T</a:MedicationType>
+                     <a:OnHold>False</a:OnHold>
+                     <a:OrderedBy>MUU</a:OrderedBy>
+                  </a:Dosage>
+               </a:Dosages>
+               <a:EndTime i:nil="true"/>
+               <a:Id>0111E660-E658-4D10-941B-9D503DB69808</a:Id>
+               <a:Medicine>
+                  <a:AtcCode>M01AE01</a:AtcCode>
+                  <a:EffectiveSubstances/>
+                  <a:MedicineFormat>TABL, KALVOPÄÄLL</a:MedicineFormat>
+                  <a:Id>552208</a:Id>
+                  <a:MedicineName>BURANA</a:MedicineName>
+                  <a:PackageSize>1X100KPL</a:PackageSize>
+                  <a:Strength>600 MG</a:Strength>
+                  <a:StrengthNum>600</a:StrengthNum>
+                  <a:StrengthUnit>MG</a:StrengthUnit>
+                  <a:VnrCode>552208</a:VnrCode>
+               </a:Medicine>
+               <a:OrderedBy>MUU</a:OrderedBy>
+               <a:PatientId>150405-LIN2</a:PatientId>
+            </a:PatientMedication>
+            <a:PatientMedication>
+               <a:ActivityTime>2005-04-15T10:42:15</a:ActivityTime>
+               <a:Authority>KHAAIR</a:Authority>
+               <a:BeginTime>2000-01-01T00:00:00</a:BeginTime>
+               <a:DeliveryRoute>
+                  <a:Code/>
+                  <a:Description i:nil="true"/>
+               </a:DeliveryRoute>
+               <a:Dosages>
+                  <a:Dosage>
+                     <a:Authority>KHAAIR</a:Authority>
+                     <a:DosageBeginTime>2000-01-01T00:00:00</a:DosageBeginTime>
+                     <a:DosageEndTime i:nil="true"/>
+                     <a:DosageForm i:nil="true"/>
+                     <a:DosageId>0C3925D3-CFF0-41BE-A592-A65FC90685F6</a:DosageId>
+                     <a:DosageNotes i:nil="true"/>
+                     <a:DosageShortForm>1x2</a:DosageShortForm>
+                     <a:DosageText/>
+                     <a:MedicationType>J</a:MedicationType>
+                     <a:OnHold>False</a:OnHold>
+                     <a:OrderedBy>MUU</a:OrderedBy>
+                  </a:Dosage>
+               </a:Dosages>
+               <a:EndTime i:nil="true"/>
+               <a:Id>0C3925D3-CFF0-41BE-A592-A65FC90685F6</a:Id>
+               <a:Medicine>
+                  <a:AtcCode>N03AG01</a:AtcCode>
+                  <a:EffectiveSubstances/>
+                  <a:MedicineFormat>ENTEROTABL</a:MedicineFormat>
+                  <a:Id>105130</a:Id>
+                  <a:MedicineName>DEPRAKINE</a:MedicineName>
+                  <a:PackageSize>1X100KPL</a:PackageSize>
+                  <a:Strength>300 MG</a:Strength>
+                  <a:StrengthNum>300</a:StrengthNum>
+                  <a:StrengthUnit>MG</a:StrengthUnit>
+                  <a:VnrCode>105130</a:VnrCode>
+               </a:Medicine>
+               <a:OrderedBy>MUU</a:OrderedBy>
+               <a:PatientId>150405-LIN2</a:PatientId>
+            </a:PatientMedication>
+            <a:PatientMedication>
+               <a:ActivityTime>2014-08-12T12:09:31</a:ActivityTime>
+               <a:Authority>tieto</a:Authority>
+               <a:BeginTime>2005-04-15T00:00:00</a:BeginTime>
+               <a:DeliveryRoute>
+                  <a:Code/>
+                  <a:Description i:nil="true"/>
+               </a:DeliveryRoute>
+               <a:Dosages>
+                  <a:Dosage>
+                     <a:Authority>tieto</a:Authority>
+                     <a:DosageBeginTime>2005-04-15T00:00:00</a:DosageBeginTime>
+                     <a:DosageEndTime i:nil="true"/>
+                     <a:DosageForm/>
+                     <a:DosageId>D47326C4-BDE5-4BBA-BCC3-0E03D26283DD</a:DosageId>
+                     <a:DosageNotes>ohjeen mukaan</a:DosageNotes>
+                     <a:DosageShortForm/>
+                     <a:DosageText/>
+                     <a:MedicationType>J</a:MedicationType>
+                     <a:OnHold>False</a:OnHold>
+                     <a:OrderedBy>MUU</a:OrderedBy>
+                  </a:Dosage>
+               </a:Dosages>
+               <a:EndTime i:nil="true"/>
+               <a:Id>D47326C4-BDE5-4BBA-BCC3-0E03D26283DD</a:Id>
+               <a:Medicine>
+                  <a:AtcCode>B01AA03</a:AtcCode>
+                  <a:EffectiveSubstances/>
+                  <a:MedicineFormat>TABL</a:MedicineFormat>
+                  <a:Id>486605</a:Id>
+                  <a:MedicineName>MAREVAN FORTE</a:MedicineName>
+                  <a:PackageSize>1X100KPL</a:PackageSize>
+                  <a:Strength>5 MG</a:Strength>
+                  <a:StrengthNum>5</a:StrengthNum>
+                  <a:StrengthUnit>MG</a:StrengthUnit>
+                  <a:VnrCode>486605</a:VnrCode>
+               </a:Medicine>
+               <a:OrderedBy>MUU</a:OrderedBy>
+               <a:PatientId>150405-LIN2</a:PatientId>
+            </a:PatientMedication>
+            <a:PatientMedication>
+               <a:ActivityTime>2005-04-15T10:42:15</a:ActivityTime>
+               <a:Authority>KHAAIR</a:Authority>
+               <a:BeginTime>2000-01-01T00:00:00</a:BeginTime>
+               <a:DeliveryRoute>
+                  <a:Code/>
+                  <a:Description i:nil="true"/>
+               </a:DeliveryRoute>
+               <a:Dosages>
+                  <a:Dosage>
+                     <a:Authority>KHAAIR</a:Authority>
+                     <a:DosageBeginTime>2000-01-01T00:00:00</a:DosageBeginTime>
+                     <a:DosageEndTime i:nil="true"/>
+                     <a:DosageForm i:nil="true"/>
+                     <a:DosageId>FC24FF1A-ACC4-4693-B374-36688D681EFF</a:DosageId>
+                     <a:DosageNotes i:nil="true"/>
+                     <a:DosageShortForm>1x1</a:DosageShortForm>
+                     <a:DosageText/>
+                     <a:MedicationType>J</a:MedicationType>
+                     <a:OnHold>False</a:OnHold>
+                     <a:OrderedBy>MUU</a:OrderedBy>
+                  </a:Dosage>
+               </a:Dosages>
+               <a:EndTime i:nil="true"/>
+               <a:Id>FC24FF1A-ACC4-4693-B374-36688D681EFF</a:Id>
+               <a:Medicine>
+                  <a:AtcCode>H03AA01</a:AtcCode>
+                  <a:EffectiveSubstances/>
+                  <a:MedicineFormat>TABL</a:MedicineFormat>
+                  <a:Id>193102</a:Id>
+                  <a:MedicineName>THYROXIN</a:MedicineName>
+                  <a:PackageSize>1X100KPL</a:PackageSize>
+                  <a:Strength>0.1 MG</a:Strength>
+                  <a:StrengthNum>0.1</a:StrengthNum>
+                  <a:StrengthUnit>MG</a:StrengthUnit>
+                  <a:VnrCode>193102</a:VnrCode>
+               </a:Medicine>
+               <a:OrderedBy>MUU</a:OrderedBy>
+               <a:PatientId>150405-LIN2</a:PatientId>
+            </a:PatientMedication>
+         </PatientMedications>
+      </GetMedicationDataResponse>
+   </s:Body>
+</s:Envelope>

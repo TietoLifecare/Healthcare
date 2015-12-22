@@ -1,0 +1,173 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetMaternalCareData_Response xmlns="urn:Tieto.HCW.EIS.EPRDocumentService.WCFService">
+         <AcknowledgeRequestStatus xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType i:nil="true"/>
+            <a:ErrorMessage i:nil="true"/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>gero et</a:MessageID>
+            <a:TransactionID>sonoras imperio</a:TransactionID>
+            <a:SenderID>per auras</a:SenderID>
+            <a:SenderApplication>circum claustra</a:SenderApplication>
+            <a:ReceiverID>quae divum incedo</a:ReceiverID>
+            <a:ReceiverApplication>verrantque per auras</a:ReceiverApplication>
+            <a:CharacterSet>nimborum in</a:CharacterSet>
+            <a:DataServiceURL>foedere certo</a:DataServiceURL>
+            <a:UserLanguageCode>profundum quippe ferant</a:UserLanguageCode>
+            <a:VersionNumber>et carcere</a:VersionNumber>
+         </MessageHeader>
+         <ContactsData xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.EPRDocumentService.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ContactData>
+               <a:PatientId>
+                  <a:Identifier>010684-4301</a:Identifier>
+               </a:PatientId>
+               <a:Organisation/>
+               <a:Area/>
+               <a:Form/>
+               <a:FunctionType/>
+               <a:Function/>
+               <a:Speciality/>
+               <a:ContactAuthor>
+                  <a:ContactDoctorCodeID/>
+                  <a:ContactDoctorCode/>
+               </a:ContactAuthor>
+               <a:DataState>F</a:DataState>
+               <a:CareprocesState>MAARITTAMATON_HOITOPROSESSIN_VAIHE</a:CareprocesState>
+               <a:ServiceEventId/>
+               <a:ContactHeading>EPRMCChildInfo</a:ContactHeading>
+               <a:ContactRowsData>
+                  <a:ContactRowData>
+                     <a:HeadingName>BirthDateTime</a:HeadingName>
+                     <a:Data>5.12.2014 9:45:00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FetalAlignmentSupply</a:HeadingName>
+                     <a:Data>Raivotarjonta (RT)</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FetusCode</a:HeadingName>
+                     <a:Data>A</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>IsAfterBirthCheckup</a:HeadingName>
+                     <a:Data>False</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>MethodOfDelivery</a:HeadingName>
+                     <a:Data>Alateitse</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>NewbornChildBirthDate</a:HeadingName>
+                     <a:Data>5.12.2014 9:45:00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>PlacentaDetails</a:HeadingName>
+                     <a:Data>Täydellinen</a:Data>
+                  </a:ContactRowData>
+               </a:ContactRowsData>
+            </a:ContactData>
+            <a:ContactData>
+               <a:PatientId>
+                  <a:Identifier>010684-4301</a:Identifier>
+               </a:PatientId>
+               <a:Organisation/>
+               <a:Area/>
+               <a:Form/>
+               <a:FunctionType/>
+               <a:Function/>
+               <a:Speciality/>
+               <a:ContactAuthor>
+                  <a:ContactDoctorCodeID/>
+                  <a:ContactDoctorCode/>
+               </a:ContactAuthor>
+               <a:DataState>F</a:DataState>
+               <a:CareprocesState>MAARITTAMATON_HOITOPROSESSIN_VAIHE</a:CareprocesState>
+               <a:ServiceEventId/>
+               <a:ContactHeading>PreviousPregnancyInfo</a:ContactHeading>
+               <a:ContactRowsData>
+                  <a:ContactRowData>
+                     <a:HeadingName>PreviousPregnancy - Year</a:HeadingName>
+                     <a:Data>2011</a:Data>
+                     <a:SubContactRows>
+                        <a:ReturnValue>
+                           <a:Value i:type="a:PreviousPregnancyChildInfo">
+                              <a:FetusCode>A</a:FetusCode>
+                              <a:EndingOfPregnancy>Keskenmeno</a:EndingOfPregnancy>
+                              <a:Weight/>
+                           </a:Value>
+                        </a:ReturnValue>
+                     </a:SubContactRows>
+                  </a:ContactRowData>
+               </a:ContactRowsData>
+            </a:ContactData>
+            <a:ContactData>
+               <a:PatientId>
+                  <a:Identifier>010684-4301</a:Identifier>
+               </a:PatientId>
+               <a:Organisation/>
+               <a:Area/>
+               <a:Form/>
+               <a:FunctionType/>
+               <a:Function/>
+               <a:Speciality/>
+               <a:ContactAuthor>
+                  <a:ContactDoctorCodeID/>
+                  <a:ContactDoctorCode/>
+               </a:ContactAuthor>
+               <a:DataState>F</a:DataState>
+               <a:CareprocesState>MAARITTAMATON_HOITOPROSESSIN_VAIHE</a:CareprocesState>
+               <a:ServiceEventId/>
+               <a:ContactHeading>CommonData</a:ContactHeading>
+               <a:ContactRowsData>
+                  <a:ContactRowData>
+                     <a:HeadingName>Episiotomia</a:HeadingName>
+                     <a:Data>False</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>LastMenstruationDate</a:HeadingName>
+                     <a:Data>2.3.2014 0:00:00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>MothersAge</a:HeadingName>
+                     <a:Data>30</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>PregnancyWeekDuringChildbirth</a:HeadingName>
+                     <a:Data>39+6</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>ProbableDueDate</a:HeadingName>
+                     <a:Data>6.12.2014 0:00:00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>ReasonForDelivery</a:HeadingName>
+                     <a:Data>Tulosyy tekstiä</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>RegularContractionDateTime</a:HeadingName>
+                     <a:Data>5.12.2014 7:00:00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FirstPhaseDuration</a:HeadingName>
+                     <a:Data>02:25</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>SecondPhaseDuration</a:HeadingName>
+                     <a:Data>00:20</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>ThirdPhaseDuration</a:HeadingName>
+                     <a:Data>00:15</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>TotalChildbirthDuration</a:HeadingName>
+                     <a:Data>03:00</a:Data>
+                  </a:ContactRowData>
+               </a:ContactRowsData>
+            </a:ContactData>
+         </ContactsData>
+      </GetMaternalCareData_Response>
+   </s:Body>
+</s:Envelope>

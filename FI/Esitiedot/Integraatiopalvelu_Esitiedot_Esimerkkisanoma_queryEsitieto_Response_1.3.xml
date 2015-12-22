@@ -1,0 +1,53 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <Esitiedot_Kysely_Response xmlns="urn:Tieto.HCW.EIS.Esitiedot.Contracts">
+         <AcknowledgeRequestStatus xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>gero et</a:MessageID>
+            <a:TransactionID>sonoras imperio</a:TransactionID>
+            <a:SenderID>per auras</a:SenderID>
+            <a:SenderApplication>circum claustra</a:SenderApplication>
+            <a:ReceiverID>quae divum incedo</a:ReceiverID>
+            <a:ReceiverApplication>verrantque per auras</a:ReceiverApplication>
+            <a:CharacterSet>nimborum in</a:CharacterSet>
+            <a:DataServiceURL>foedere certo</a:DataServiceURL>
+            <a:UserLanguageCode>profundum quippe ferant</a:UserLanguageCode>
+            <a:VersionNumber>et carcere</a:VersionNumber>
+         </MessageHeader>
+         <Contacts xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Esitiedot.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:QueryResponseContact>
+               <a:PatientId>
+                  <a:Identifier>123456-7890</a:Identifier>
+               </a:PatientId>
+               <a:Created>2013-04-17T14:06:19.121198+03:00</a:Created>
+               <a:Finished>0001-01-01T00:00:00</a:Finished>
+               <a:FormsetCode>OTK01</a:FormsetCode>
+               <a:FormsetCodeSystem>1.2.456.789.12.123</a:FormsetCodeSystem>
+               <a:FormsetName>Opiskelijan testikysely</a:FormsetName>
+               <a:Organisation>ANKKALINNA</a:Organisation>
+               <a:OrgUnit>1320Y</a:OrgUnit>
+               <a:ContactId>23</a:ContactId>
+               <a:Status>FORMSET_SENT</a:Status>
+            </a:QueryResponseContact>
+            <a:QueryResponseContact>
+               <a:PatientId>
+                  <a:Identifier>123456-7890</a:Identifier>
+               </a:PatientId>
+               <a:Created>2013-04-17T14:06:19.123151+03:00</a:Created>
+               <a:Finished>0001-01-01T00:00:00</a:Finished>
+               <a:FormsetCode>OTK01</a:FormsetCode>
+               <a:FormsetCodeSystem>1.2.456.789.12.123</a:FormsetCodeSystem>
+               <a:FormsetName>Opiskelijan testikysely</a:FormsetName>
+               <a:Organisation>ANKKALINNA</a:Organisation>
+               <a:OrgUnit>1320Y</a:OrgUnit>
+               <a:ContactId>24</a:ContactId>
+               <a:Status>FORMSET_RECEIVED</a:Status>
+            </a:QueryResponseContact>
+         </Contacts>
+      </Esitiedot_Kysely_Response>
+   </s:Body>
+</s:Envelope>

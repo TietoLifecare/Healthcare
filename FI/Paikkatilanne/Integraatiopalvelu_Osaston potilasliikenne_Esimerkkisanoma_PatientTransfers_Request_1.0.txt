@@ -1,0 +1,29 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Tieto.HCW.EIS.PaikkatilanneService.ServiceContracts" xmlns:urn1="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PaikkatilanneService.DataContracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PatientTransfersRequest>
+         <urn1:MessageHeader>
+            <tiet:MessageID>?</tiet:MessageID>
+            <tiet:TransactionID>?</tiet:TransactionID>
+            <tiet:SenderID>?</tiet:SenderID>
+            <tiet:SenderApplication>?</tiet:SenderApplication>
+            <tiet:ReceiverID>?</tiet:ReceiverID>
+            <tiet:ReceiverApplication>?</tiet:ReceiverApplication>
+            <tiet:CharacterSet>?</tiet:CharacterSet>
+            <tiet:DataServiceURL>?</tiet:DataServiceURL>
+            <tiet:UserLanguageCode>?</tiet:UserLanguageCode>
+            <tiet:VersionNumber>?</tiet:VersionNumber>
+         </urn1:MessageHeader>
+         <urn1:Common>
+            <tiet:ContractKey>5B3C19F-0A99-59AB-023E-DE0A9877BB21</tiet:ContractKey>
+            <tiet:UserId>?</tiet:UserId>
+            <tiet:CallingSystem>Potikka</tiet:CallingSystem>
+            <tiet:CallingUserId>?</tiet:CallingUserId>
+         </urn1:Common>
+         <urn1:Transfers>
+            <tiet1:Timestamp>2013-05-15</tiet1:Timestamp>
+            <tiet1:Hospital>317</tiet1:Hospital>
+         </urn1:Transfers>
+      </urn:PatientTransfersRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

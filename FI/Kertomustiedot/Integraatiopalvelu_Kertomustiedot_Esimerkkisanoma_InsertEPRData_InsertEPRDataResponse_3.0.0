@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <InsertEPRDataResponse xmlns="Lifecare.Integration.EPRDocumentService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID/>
+            <a:TransactionID/>
+            <a:SenderID/>
+            <a:SenderApplication/>
+            <a:ReceiverID/>
+            <a:ReceiverApplication/>
+            <a:CharacterSet/>
+            <a:DataServiceURL/>
+            <a:UserLanguageCode/>
+            <a:VersionNumber/>
+         </MessageHeader>
+         <Patient xmlns:a="Lifecare.Integration.EPRDocumentService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Identifier>010101-0101</a:Identifier>
+         </Patient>
+         <ContactId>67185535-0bb5-2338-9d6e-7c583b5a1623</ContactId>
+         <ContactRow>1</ContactRow>
+      </InsertEPRDataResponse>
+   </s:Body>
+</s:Envelope>

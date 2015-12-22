@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Tieto.HCW.EIS.PaikkatilanneService.ServiceContracts" xmlns:urn1="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PaikkatilanneService.DataContracts">
+   <soapenv:Header/>
+      <urn:PaikkatilanneRequest>
+         <!--Optional:-->
+         <urn1:MessageHeader>
+            <!--Optional:-->
+            <tiet:CharacterSet>?</tiet:CharacterSet>
+            <!--Optional:-->
+            <tiet:DataServiceURL>?</tiet:DataServiceURL>
+            <!--Optional:-->
+            <tiet:MessageID>?</tiet:MessageID>
+            <!--Optional:-->
+            <tiet:ReceiverApplication>?</tiet:ReceiverApplication>
+            <!--Optional:-->
+            <tiet:ReceiverID>?</tiet:ReceiverID>
+            <!--Optional:-->
+            <tiet:SenderApplication>?</tiet:SenderApplication>
+            <!--Optional:-->
+            <tiet:SenderID>?</tiet:SenderID>
+            <!--Optional:-->
+            <tiet:TransactionID>?</tiet:TransactionID>
+            <!--Optional:-->
+            <tiet:UserLanguageCode>?</tiet:UserLanguageCode>
+            <!--Optional:-->
+            <tiet:VersionNumber>?</tiet:VersionNumber>
+         </urn1:MessageHeader>
+         <!--Optional:-->
+         <urn1:Common>
+            <!--Optional:-->
+            <tiet:ContractKey>xxxxxxxx</tiet:ContractKey>
+            <!--Optional:-->
+            <tiet:UserId>?</tiet:UserId>
+            <!--Optional:-->
+            <tiet:CallingSystem>Potikka</tiet:CallingSystem>
+            <!--Optional:-->
+            <tiet:CallingUserId>?</tiet:CallingUserId>
+         </urn1:Common>
+         <!--Optional:-->
+         <urn1:Ward>
+            <tiet1:Collection>K</tiet1:Collection>
+            <!--Optional:-->
+            <tiet1:Timestamp>2011-03-01</tiet1:Timestamp>
+            <tiet1:Hospital>317</tiet1:Hospital>
+            <!--Optional:-->
+            <tiet1:Ward>2204Y</tiet1:Ward>
+         </urn1:Ward>
+      </urn:PaikkatilanneRequest>
+
+</soapenv:Envelope>

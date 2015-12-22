@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Diagnosis.DataContracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetDiagnosisDataRequest>
+         <!--Optional:-->
+         <tem:MessageHeader>
+            <!--Optional:-->
+            <tiet:MessageID>gero et</tiet:MessageID>
+            <!--Optional:-->
+            <tiet:TransactionID>sonoras imperio</tiet:TransactionID>
+            <!--Optional:-->
+            <tiet:SenderID>quae divum incedo</tiet:SenderID>
+            <!--Optional:-->
+            <tiet:SenderApplication>verrantque per auras</tiet:SenderApplication>
+            <tiet:ReceiverID>per auras</tiet:ReceiverID>
+            <!--Optional:-->
+            <tiet:ReceiverApplication>circum claustra</tiet:ReceiverApplication>
+            <!--Optional:-->
+            <tiet:CharacterSet>nimborum in</tiet:CharacterSet>
+            <!--Optional:-->
+            <tiet:DataServiceURL>foedere certo</tiet:DataServiceURL>
+            <!--Optional:-->
+            <tiet:UserLanguageCode>profundum quippe ferant</tiet:UserLanguageCode>
+            <!--Optional:-->
+            <tiet:VersionNumber>et carcere</tiet:VersionNumber>
+         </tem:MessageHeader>
+         <!--Optional:-->
+         <tem:Common>
+            <!--Optional:-->
+            <tiet:ContractKey>iovis rapidum iaculata</tiet:ContractKey>
+            <!--Optional:-->
+            <tiet:UserId>speluncis abdidit</tiet:UserId>
+            <!--Optional:-->
+            <tiet:CallingSystem>bella gero et</tiet:CallingSystem>
+            <!--Optional:-->
+            <tiet:CallingUserId>flammas turbine</tiet:CallingUserId>
+         </tem:Common>
+         <!--Optional:-->
+         <tem:DiagnosisReq>
+            <!--Optional:-->
+            <tiet1:Organisation>
+               <!--Optional:-->
+               <tiet1:CodeSetName>hoc metuens</tiet1:CodeSetName>
+               <!--Optional:-->
+               <tiet1:CodeSetId>ac vinclis</tiet1:CodeSetId>
+               <!--Optional:-->
+               <tiet1:CodeValue>speluncis abdidit</tiet1:CodeValue>
+               <!--Optional:-->
+               <tiet1:CodeDescription>aris imponet honorem</tiet1:CodeDescription>
+            </tiet1:Organisation>
+            <!--Optional:-->
+            <tiet1:Area>
+               <!--Optional:-->
+               <tiet1:CodeSetName>praeterea aut</tiet1:CodeSetName>
+               <!--Optional:-->
+               <tiet1:CodeSetId>claustra fremunt</tiet1:CodeSetId>
+               <!--Optional:-->
+               <tiet1:CodeValue>imperio premit</tiet1:CodeValue>
+               <!--Optional:-->
+               <tiet1:CodeDescription>quisquam numen</tiet1:CodeDescription>
+            </tiet1:Area>
+            <tiet1:PatientId>
+               <tiet1:Identifier>010101-0101</tiet1:Identifier>
+            </tiet1:PatientId>
+            <tiet1:EffectiveTime>
+               <tiet1:StartDateTime>2008-08-06T17:17:00+03:00</tiet1:StartDateTime>
+               <tiet1:EndDateTime>2011-12-25T04:49:17</tiet1:EndDateTime>
+            </tiet1:EffectiveTime>
+         </tem:DiagnosisReq>
+      </tem:GetDiagnosisDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

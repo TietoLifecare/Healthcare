@@ -1,0 +1,56 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetRavaPointsDataResponse xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <RavaPoints xmlns="urn:Tieto.HCW.EIS.PaikkatilanneService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PaikkatilanneService.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Rava>
+               <a:Rava>
+                  <a:PatientData>
+                     <a:SSN>070444-A020</a:SSN>
+                     <a:FamilyName>Haapala Testi Aira</a:FamilyName>
+                     <a:GivenNames/>
+                  </a:PatientData>
+                  <a:Points>1.58</a:Points>
+                  <a:EvaluationDate>2007-09-12T00:00:00</a:EvaluationDate>
+                  <a:EfficaUser>
+                     <a:EfficaUsename>tieto</a:EfficaUsename>
+                     <a:EfficaFamilyName>Tietovirta Tiina</a:EfficaFamilyName>
+                     <a:EfficaGivenNames/>
+                  </a:EfficaUser>
+               </a:Rava>
+               <a:Rava>
+                  <a:PatientData>
+                     <a:SSN>101080-TES2</a:SSN>
+                     <a:FamilyName>Testi Anne Jaana</a:FamilyName>
+                     <a:GivenNames/>
+                  </a:PatientData>
+                  <a:Points>1.29</a:Points>
+                  <a:EvaluationDate>2007-09-13T00:00:00</a:EvaluationDate>
+                  <a:EfficaUser>
+                     <a:EfficaUsename>tieto</a:EfficaUsename>
+                     <a:EfficaFamilyName>Tietovirta Tiina</a:EfficaFamilyName>
+                     <a:EfficaGivenNames/>
+                  </a:EfficaUser>
+               </a:Rava>
+            </a:Rava>
+            <a:Timestamp>2013-05-29T12:50:34</a:Timestamp>
+         </RavaPoints>
+      </GetRavaPointsDataResponse>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="PatientDataIntegration" targetNamespace="Lifecare.Integration.PatientDataIntegration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Lifecare.Integration.PatientDataIntegration" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.PatientDataIntegration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="Lifecare.Integration.Common.Contracts"/>
+			<xs:import namespace="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+			<xs:element name="GetPatientDataRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q1:MessageHeader" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q2:CommonRequestData" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientId" nillable="true" type="q3:PatientId" xmlns:q3="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+						<xs:element minOccurs="0" name="FetchDead" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPatientDataResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q4:AcknowledgeRequestStatus" xmlns:q4="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q5:MessageHeader" xmlns:q5="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Patients" nillable="true" type="q6:ArrayOfPatient" xmlns:q6="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdatePatientDataRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q7:MessageHeader" xmlns:q7="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q8:CommonRequestData" xmlns:q8="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientUpd" nillable="true" type="q9:PatientUpd" xmlns:q9="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdatePatientDataResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q10:AcknowledgeRequestStatus" xmlns:q10="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q11:MessageHeader" xmlns:q11="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientId" nillable="true" type="q12:PatientId" xmlns:q12="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdateNextOfKinDataRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q13:MessageHeader" xmlns:q13="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q14:CommonRequestData" xmlns:q14="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientId" nillable="true" type="q15:PatientId" xmlns:q15="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+						<xs:element minOccurs="0" name="NextOfKinUpd" nillable="true" type="q16:NextOfKinUpd" xmlns:q16="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdateNextOfKinDataResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q17:AcknowledgeRequestStatus" xmlns:q17="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q18:MessageHeader" xmlns:q18="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientId" nillable="true" type="q19:PatientId" xmlns:q19="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPatientDataHomeCareRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q20:MessageHeader" xmlns:q20="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="Common" nillable="true" type="q21:CommonRequestData" xmlns:q21="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="HomeCareRequest" nillable="true" type="q22:HomeCareRequest" xmlns:q22="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetPatientDataHomeCareResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="AcknowledgeRequestStatus" nillable="true" type="q23:AcknowledgeRequestStatus" xmlns:q23="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="MessageHeader" nillable="true" type="q24:MessageHeader" xmlns:q24="Lifecare.Integration.Common.Contracts"/>
+						<xs:element minOccurs="0" name="PatientsHomeCare" nillable="true" type="q25:ArrayOfPatientHomeCare" xmlns:q25="Lifecare.Integration.PatientDataIntegration.Contracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.Common.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="Lifecare.Integration.Common.Contracts">
+			<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+			<xs:complexType name="MessageHeader">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SenderID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SenderApplication" nillable="true" type="xs:string"/>
+					<xs:element name="ReceiverID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceiverApplication" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CharacterSet" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DataServiceURL" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="UserLanguageCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="VersionNumber" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="MessageHeader" nillable="true" type="tns:MessageHeader"/>
+			<xs:complexType name="CommonRequestData">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ContractKey" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CallingSystem" nillable="true" type="xs:string"/>
+					<xs:element name="Area" nillable="true" type="tns:Code"/>
+					<xs:element name="UserIdentifiers" nillable="true" type="tns:ArrayOfUserIdentifier"/>
+					<xs:element name="Function" nillable="true" type="tns:Code"/>
+					<xs:element minOccurs="0" name="ReasonCode" nillable="true" type="tns:Code"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CommonRequestData" nillable="true" type="tns:CommonRequestData"/>
+			<xs:complexType name="Code">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CodeSetName" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeSetId" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeValue" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="CodeDescription" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Code" nillable="true" type="tns:Code"/>
+			<xs:complexType name="ArrayOfUserIdentifier">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="UserIdentifier" nillable="true" type="tns:UserIdentifier"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfUserIdentifier" nillable="true" type="tns:ArrayOfUserIdentifier"/>
+			<xs:complexType name="UserIdentifier">
+				<xs:sequence>
+					<xs:element name="UserIdentifierCodeId" type="tns:UserIdentifierCodeId"/>
+					<xs:element name="UserIdentifierCode" nillable="true" type="xs:string"/>
+					<xs:element name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element name="GivenNames" nillable="true" type="xs:string"/>
+					<xs:element name="Profession" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="UserIdentifier" nillable="true" type="tns:UserIdentifier"/>
+			<xs:simpleType name="UserIdentifierCodeId">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="SOCIAL_SECURITY_NUMBER">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="SV_CODE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="TERHIKKI_CODE">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="EFFICA_USER_ID">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="UserIdentifierCodeId" nillable="true" type="tns:UserIdentifierCodeId"/>
+			<xs:complexType name="AcknowledgeRequestStatus">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="HasOperationFailed" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="ErrorType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="AcknowledgeRequestStatus" nillable="true" type="tns:AcknowledgeRequestStatus"/>
+			<xs:complexType name="LisFaultInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Category" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="FieldValue" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="LisFaultInfo" nillable="true" type="tns:LisFaultInfo"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="Lifecare.Integration.PatientDataIntegration.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="Lifecare.Integration.PatientDataIntegration.Contracts">
+			<xs:import namespace="Lifecare.Integration.Common.Contracts"/>
+			<xs:complexType name="PatientId">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientId" nillable="true" type="tns:PatientId"/>
+			<xs:complexType name="ArrayOfPatient">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Patient" nillable="true" type="tns:Patient"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatient" nillable="true" type="tns:ArrayOfPatient"/>
+			<xs:complexType name="Patient">
+				<xs:complexContent mixed="false">
+					<xs:extension base="tns:PatientUpd">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="NextOfKins" nillable="true" type="tns:ArrayOfNextOfKin"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="Patient" nillable="true" type="tns:Patient"/>
+			<xs:complexType name="PatientUpd">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element minOccurs="0" name="SecurityBan" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GivenNames" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DateOfDeath" nillable="true" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Profession" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Sex" nillable="true" type="q1:Code" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Language" nillable="true" type="q2:Code" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Nationality" nillable="true" type="q3:Code" xmlns:q3="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="HomeCity" nillable="true" type="q4:Code" xmlns:q4="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfAddress"/>
+					<xs:element minOccurs="0" name="Telephones" nillable="true" type="tns:ArrayOfTeleAddress"/>
+					<xs:element minOccurs="0" name="RecidenceCity" nillable="true" type="q5:Code" xmlns:q5="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="BirthCity" nillable="true" type="q6:Code" xmlns:q6="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="MaritalStatus" nillable="true" type="q7:Code" xmlns:q7="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfPermission"/>
+					<xs:element minOccurs="0" name="LanguageOfErrand" nillable="true" type="q8:Code" xmlns:q8="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="LanguageOfInterpretation" nillable="true" type="q9:Code" xmlns:q9="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="NationalityOfBirth" nillable="true" type="q10:Code" xmlns:q10="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="PreviousFamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DctConsent" nillable="true" type="tns:DctConsent"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientUpd" nillable="true" type="tns:PatientUpd"/>
+			<xs:complexType name="ArrayOfAddress">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress"/>
+			<xs:complexType name="Address">
+				<xs:sequence>
+					<xs:element name="AddressType" type="tns:AddressType"/>
+					<xs:element minOccurs="0" name="StreetAddress" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+					<xs:element name="PeriodStart" type="xs:dateTime"/>
+					<xs:element name="PeriodEnd" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Id" nillable="true" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Address" nillable="true" type="tns:Address"/>
+			<xs:simpleType name="AddressType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="PERMANENT"/>
+					<xs:enumeration value="TEMPORARY"/>
+					<xs:enumeration value="OFFICE"/>
+					<xs:enumeration value="BIRTHPLACE"/>
+					<xs:enumeration value="UNKNOWN"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="AddressType" nillable="true" type="tns:AddressType"/>
+			<xs:complexType name="ArrayOfTeleAddress">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="TeleAddress" nillable="true" type="tns:TeleAddress"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfTeleAddress" nillable="true" type="tns:ArrayOfTeleAddress"/>
+			<xs:complexType name="TeleAddress">
+				<xs:sequence>
+					<xs:element name="TeleAddressType" type="tns:TeleAddressType"/>
+					<xs:element minOccurs="0" name="AddressValue" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Id" nillable="true" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TeleAddress" nillable="true" type="tns:TeleAddress"/>
+			<xs:simpleType name="TeleAddressType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EMAIL"/>
+					<xs:enumeration value="MOBILE"/>
+					<xs:enumeration value="PHONE"/>
+					<xs:enumeration value="OFFICE"/>
+					<xs:enumeration value="FAX"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="TeleAddressType" nillable="true" type="tns:TeleAddressType"/>
+			<xs:complexType name="ArrayOfPermission">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Permission" nillable="true" type="tns:Permission"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPermission" nillable="true" type="tns:ArrayOfPermission"/>
+			<xs:complexType name="Permission">
+				<xs:sequence>
+					<xs:element name="PermissionType" type="tns:PermissionType"/>
+					<xs:element name="Allowed" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Permission" nillable="true" type="tns:Permission"/>
+			<xs:simpleType name="PermissionType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EMAIL"/>
+					<xs:enumeration value="SMS"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="PermissionType" nillable="true" type="tns:PermissionType"/>
+			<xs:complexType name="DctConsent">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ConsentValid" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="StartDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="DctConsent" nillable="true" type="tns:DctConsent"/>
+			<xs:complexType name="ArrayOfNextOfKin">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="NextOfKin" nillable="true" type="tns:NextOfKin"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfNextOfKin" nillable="true" type="tns:ArrayOfNextOfKin"/>
+			<xs:complexType name="NextOfKin">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GivenNames" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SecurityBan" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Relationship" type="tns:Relationship"/>
+					<xs:element minOccurs="0" name="FosterParent" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Guardian" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Dependant" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Partner" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="SupportPerson" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Trustee" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="TrustedMan" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Primary" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="PatientAgent" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Payer" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Language" nillable="true" type="q11:Code" xmlns:q11="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfAddress"/>
+					<xs:element minOccurs="0" name="Telephones" nillable="true" type="tns:ArrayOfTeleAddress"/>
+					<xs:element minOccurs="0" name="PermissionForPatientData" nillable="true" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="NextOfKin" nillable="true" type="tns:NextOfKin"/>
+			<xs:simpleType name="Relationship">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="UNDEFINED"/>
+					<xs:enumeration value="UNKNOWN"/>
+					<xs:enumeration value="FATHER"/>
+					<xs:enumeration value="MOTHER"/>
+					<xs:enumeration value="OTHER"/>
+					<xs:enumeration value="CHILD"/>
+					<xs:enumeration value="SPOUSE"/>
+					<xs:enumeration value="SIBLING"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="Relationship" nillable="true" type="tns:Relationship"/>
+			<xs:complexType name="NextOfKinUpd">
+				<xs:complexContent mixed="false">
+					<xs:extension base="tns:NextOfKin">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="Action" type="tns:NextOfKinAction"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="NextOfKinUpd" nillable="true" type="tns:NextOfKinUpd"/>
+			<xs:simpleType name="NextOfKinAction">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="INS"/>
+					<xs:enumeration value="UPD"/>
+					<xs:enumeration value="DEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="NextOfKinAction" nillable="true" type="tns:NextOfKinAction"/>
+			<xs:complexType name="HomeCareRequest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="PatientId" nillable="true" type="tns:PatientId"/>
+					<xs:element minOccurs="0" name="FunctionType" nillable="true" type="q12:Code" xmlns:q12="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Function" nillable="true" type="q13:Code" xmlns:q13="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="FetchDead" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="HomeCareRequest" nillable="true" type="tns:HomeCareRequest"/>
+			<xs:complexType name="ArrayOfPatientHomeCare">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PatientHomeCare" nillable="true" type="tns:PatientHomeCare"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatientHomeCare" nillable="true" type="tns:ArrayOfPatientHomeCare"/>
+			<xs:complexType name="PatientHomeCare">
+				<xs:complexContent mixed="false">
+					<xs:extension base="tns:Patient">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="CarePersons" nillable="true" type="tns:ArrayOfCarePerson"/>
+							<xs:element minOccurs="0" name="HomeCares" nillable="true" type="tns:ArrayOfHomeCare"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="PatientHomeCare" nillable="true" type="tns:PatientHomeCare"/>
+			<xs:complexType name="ArrayOfCarePerson">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="CarePerson" nillable="true" type="tns:CarePerson"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfCarePerson" nillable="true" type="tns:ArrayOfCarePerson"/>
+			<xs:complexType name="CarePerson">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Resource" nillable="true" type="tns:Resource"/>
+					<xs:element minOccurs="0" name="CareRealtionship" nillable="true" type="q14:Code" xmlns:q14="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="FunctionType" nillable="true" type="q15:Code" xmlns:q15="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="StartDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="EndDate" type="xs:dateTime"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CarePerson" nillable="true" type="tns:CarePerson"/>
+			<xs:complexType name="Resource">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CodeSetName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CodeSetId" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Id" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GivenNames" nillable="true" type="xs:string"/>
+					<xs:element name="Profession" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Resource" nillable="true" type="tns:Resource"/>
+			<xs:complexType name="ArrayOfHomeCare">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="HomeCare" nillable="true" type="tns:HomeCare"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfHomeCare" nillable="true" type="tns:ArrayOfHomeCare"/>
+			<xs:complexType name="HomeCare">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Function" nillable="true" type="q16:Code" xmlns:q16="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="Area" nillable="true" type="q17:Code" xmlns:q17="Lifecare.Integration.Common.Contracts"/>
+					<xs:element minOccurs="0" name="TeamId" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="StartDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="EndDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="KeyCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="VisitReason" nillable="true" type="q18:Code" xmlns:q18="Lifecare.Integration.Common.Contracts"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="HomeCare" nillable="true" type="tns:HomeCare"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GetPatientDataRequest">
+		<wsdl:part name="parameters" element="tns:GetPatientDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetPatientDataResponse">
+		<wsdl:part name="parameters" element="tns:GetPatientDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PatientDataIntegration_GetPatientData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:LisFaultInfo" xmlns:q1="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePatientDataRequest">
+		<wsdl:part name="parameters" element="tns:UpdatePatientDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePatientDataResponse">
+		<wsdl:part name="parameters" element="tns:UpdatePatientDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PatientDataIntegration_UpdatePatientData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:LisFaultInfo" xmlns:q2="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateNextOfKinDataRequest">
+		<wsdl:part name="parameters" element="tns:UpdateNextOfKinDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateNextOfKinDataResponse">
+		<wsdl:part name="parameters" element="tns:UpdateNextOfKinDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PatientDataIntegration_UpdateNextOfKinData_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:LisFaultInfo" xmlns:q3="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:message name="GetPatientDataHomeCareRequest">
+		<wsdl:part name="parameters" element="tns:GetPatientDataHomeCareRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetPatientDataHomeCareResponse">
+		<wsdl:part name="parameters" element="tns:GetPatientDataHomeCareResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PatientDataIntegration_GetPatientDataHomeCare_LisFaultInfoFault_FaultMessage">
+		<wsdl:part name="detail" element="q4:LisFaultInfo" xmlns:q4="Lifecare.Integration.Common.Contracts"/>
+	</wsdl:message>
+	<wsdl:portType name="PatientDataIntegration">
+		<wsdl:operation name="GetPatientData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientData" name="GetPatientDataRequest" message="tns:GetPatientDataRequest"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataResponse" name="GetPatientDataResponse" message="tns:GetPatientDataResponse"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:PatientDataIntegration_GetPatientData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePatientData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdatePatientData" name="UpdatePatientDataRequest" message="tns:UpdatePatientDataRequest"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdatePatientDataResponse" name="UpdatePatientDataResponse" message="tns:UpdatePatientDataResponse"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdatePatientDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:PatientDataIntegration_UpdatePatientData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateNextOfKinData">
+			<wsdl:input wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdateNextOfKinData" name="UpdateNextOfKinDataRequest" message="tns:UpdateNextOfKinDataRequest"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdateNextOfKinDataResponse" name="UpdateNextOfKinDataResponse" message="tns:UpdateNextOfKinDataResponse"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdateNextOfKinDataLisFaultInfoFault" name="LisFaultInfoFault" message="tns:PatientDataIntegration_UpdateNextOfKinData_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetPatientDataHomeCare">
+			<wsdl:input wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataHomeCare" name="GetPatientDataHomeCareRequest" message="tns:GetPatientDataHomeCareRequest"/>
+			<wsdl:output wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataHomeCareResponse" name="GetPatientDataHomeCareResponse" message="tns:GetPatientDataHomeCareResponse"/>
+			<wsdl:fault wsaw:Action="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataHomeCareLisFaultInfoFault" name="LisFaultInfoFault" message="tns:PatientDataIntegration_GetPatientDataHomeCare_LisFaultInfoFault_FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_PatientDataIntegration" type="tns:PatientDataIntegration">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="GetPatientData">
+			<soap:operation soapAction="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientData" style="document"/>
+			<wsdl:input name="GetPatientDataRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetPatientDataResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePatientData">
+			<soap:operation soapAction="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdatePatientData" style="document"/>
+			<wsdl:input name="UpdatePatientDataRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="UpdatePatientDataResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateNextOfKinData">
+			<soap:operation soapAction="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/UpdateNextOfKinData" style="document"/>
+			<wsdl:input name="UpdateNextOfKinDataRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="UpdateNextOfKinDataResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetPatientDataHomeCare">
+			<soap:operation soapAction="Lifecare.Integration.PatientDataIntegration/PatientDataIntegration/GetPatientDataHomeCare" style="document"/>
+			<wsdl:input name="GetPatientDataHomeCareRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetPatientDataHomeCareResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="LisFaultInfoFault">
+				<soap:fault use="literal" name="LisFaultInfoFault" namespace=""/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PatientDataIntegration">
+		<wsdl:port name="BasicHttpBinding_PatientDataIntegration" binding="tns:BasicHttpBinding_PatientDataIntegration">
+			<soap:address location="http://localhost:3560/PatientDataIntegration.svc"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

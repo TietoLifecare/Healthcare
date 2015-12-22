@@ -1,0 +1,336 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetScheduleDataHomeCareResponse xmlns="Lifecare.Integration.ScheduleDataService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>?</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <SchedulesHomeCare xmlns:a="Lifecare.Integration.ScheduleDataService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ScheduleHomeCare>
+               <a:ScheduleId xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>HL</b:CodeValue>
+                  <b:CodeDescription>sairaanhoitaja Hanski</b:CodeDescription>
+               </a:ScheduleId>
+               <a:SlotsHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>1e79fe45-9e62-48f4-9c17-04b1226e4714</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-18T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-18T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:15</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150318</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>5ce584f3-f1f7-497f-9883-50bf9a80c32d</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-25T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-25T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:16</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150325</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>8695d485-349c-4112-bb61-52c4830d8e7b</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-20T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-20T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:15</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150320</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>63d00a9e-98b3-4b89-a5dd-94aff852ae23</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-23T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-23T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:15</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150323</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>c2c033a1-e3a7-45ae-b279-9e64cd2f276e</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-13T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-13T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:15</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150313</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>28ec9fa8-6a2c-4d63-a1d4-b4f9e3cddf6d</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-27T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-27T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:16</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150327</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+                  <a:SlotHomeCare>
+                     <a:SlotId>08ad06fb-9ec7-4344-9547-de9175337483</a:SlotId>
+                     <a:Status>NotAttended</a:Status>
+                     <a:StartDateTime>2015-03-16T07:00:00</a:StartDateTime>
+                     <a:EndDateTime>2015-03-16T08:00:00</a:EndDateTime>
+                     <a:TimeSlot>60</a:TimeSlot>
+                     <a:ChangeType>All</a:ChangeType>
+                     <a:Function xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khoito</b:CodeValue>
+                     </a:Function>
+                     <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue>khhöy</b:CodeValue>
+                        <b:CodeDescription>Höyhtyän kotihoito</b:CodeDescription>
+                     </a:Area>
+                     <a:AppointmentType xmlns:b="Lifecare.Integration.Common.Contracts">
+                        <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                        <b:CodeSetId/>
+                        <b:CodeValue></b:CodeValue>
+                     </a:AppointmentType>
+                     <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CaringWard xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:VisitType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+                     <a:CustomerId>
+                        <a:Identifier>060580-A010</a:Identifier>
+                     </a:CustomerId>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>hl</a:CodeValue>
+                        <a:CodeDescription>Logren Hannele</a:CodeDescription>
+                        <a:Title>sairaanhoitaja</a:Title>
+                     </a:Resource>
+                     <a:ChangeTime>2015-03-13T09:27:15</a:ChangeTime>
+                     <a:AdditionalData/>
+                     <a:HomeCare>
+                        <a:ServiceCode>khkot</a:ServiceCode>
+                        <a:ServiceDate>20150316</a:ServiceDate>
+                     </a:HomeCare>
+                  </a:SlotHomeCare>
+               </a:SlotsHomeCare>
+            </a:ScheduleHomeCare>
+         </SchedulesHomeCare>
+      </GetScheduleDataHomeCareResponse>
+   </s:Body>
+</s:Envelope>

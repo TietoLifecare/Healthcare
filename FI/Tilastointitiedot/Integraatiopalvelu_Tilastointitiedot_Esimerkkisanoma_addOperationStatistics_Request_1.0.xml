@@ -1,0 +1,399 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:eff="http://schemas.datacontract.org/2004/07/Effica.Integrations.Statistics.Service.Contracts.Datacontracts.Common" xmlns:eff1="http://schemas.datacontract.org/2004/07/Effica.Integrations.Statistics.Service.Contracts.Datacontracts.Operation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:OperationStatisticsRequest>
+         <!--Optional:-->
+         <tem:MessageHeader>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:MessageID>gero et</tiet:MessageID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:TransactionID>sonoras imperio</tiet:TransactionID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:SenderID>quae divum incedo</tiet:SenderID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:SenderApplication>verrantque per auras</tiet:SenderApplication>
+            <!--type: string-->
+            <tiet:ReceiverID>per auras</tiet:ReceiverID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:ReceiverApplication>circum claustra</tiet:ReceiverApplication>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CharacterSet>nimborum in</tiet:CharacterSet>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:DataServiceURL>foedere certo</tiet:DataServiceURL>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:UserLanguageCode>profundum quippe ferant</tiet:UserLanguageCode>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:VersionNumber>et carcere</tiet:VersionNumber>
+         </tem:MessageHeader>
+         <!--Optional:-->
+         <tem:Common>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:ContractKey>xxx</tiet:ContractKey>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:UserId>speluncis abdidit</tiet:UserId>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CallingSystem>Osapuoli_Esko</tiet:CallingSystem>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CallingUserId>flammas turbine</tiet:CallingUserId>
+         </tem:Common>
+         <!--Optional:-->
+         <tem:CommonRequestData>
+            <eff:Area>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>hoc metuens</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>ac vinclis</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>speluncis abdidit</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>aris imponet honorem</eff:CodeDescription>
+            </eff:Area>
+            <eff:ContactAuthor>
+               <!--Optional:-->
+               <!--type: CaCodeId - enumeration: [SocialSecurityNumber,SvCode,ValvirasProfessionalNumber,EfficaUserId]-->
+               <eff:ContactAuthorCodeId>SvCode</eff:ContactAuthorCodeId>
+               <!--type: string-->
+               <eff:ContactAuthorCode>tieto</eff:ContactAuthorCode>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:FamilyName>circum claustra fremunt</eff:FamilyName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:GivenNames>certo et premere</eff:GivenNames>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:Profession>et montis</eff:Profession>
+            </eff:ContactAuthor>
+            <!--Optional:-->
+            <eff:FunctionType>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>feta furentibus</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>sed pater</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>60</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>austris aeoliam</eff:CodeDescription>
+            </eff:FunctionType>
+         </tem:CommonRequestData>
+         <!--Optional:-->
+         <tem:CommonStatisticsData>
+            <eff:EventType>
+               <!--type: string-->
+               <eff:Event>sciret dare</eff:Event>
+               <eff:PatientId>
+                  <!--type: string-->
+                  <eff:Identifier>dare iussus</eff:Identifier>
+               </eff:PatientId>
+               <!--type: string-->
+               <eff:UserId>bella gero</eff:UserId>
+               <!--type: dateTime-->
+               <eff:StartDateTime>2000-08-23T03:34:44</eff:StartDateTime>
+            </eff:EventType>
+         </tem:CommonStatisticsData>
+         <!--Optional:-->
+         <tem:StatisticsData>
+            <eff:PatientId>
+               <!--type: string-->
+               <eff:Identifier>190860-9999</eff:Identifier>
+            </eff:PatientId>
+            <!--type: string-->
+            <eff:UserId>et soror</eff:UserId>
+            <eff:Function>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>annos bella gero</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>ventos tempestatesque sonoras</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>esh</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>rapidum iaculata</eff:CodeDescription>
+            </eff:Function>
+            <eff:Area>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>insuper altos</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>cum murmure</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>in patriam</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>abdidit atris hoc</eff:CodeDescription>
+            </eff:Area>
+            <eff:RequestArea>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>coniunx una cum</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>ipsa iovis</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>frenat illi indignantes</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>nimborum in</eff:CodeDescription>
+            </eff:RequestArea>
+            <!--Optional:-->
+            <eff:VisitGroup>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>mollitque animos</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>montis insuper altos</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>1</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>gero et</eff:CodeDescription>
+            </eff:VisitGroup>
+            <eff:ContactType>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>circum claustra fremunt</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>montis insuper</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>aris imponet</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>aris imponet</eff:CodeDescription>
+            </eff:ContactType>
+            <eff:VisitType>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>incedo regina</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>ac vinclis</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>leik</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>et premere et</eff:CodeDescription>
+            </eff:VisitType>
+            <!--Optional:-->
+            <eff:VisitUrgency>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>dedit qui</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>profundum quippe ferant</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>imposuit regemque</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>magno cum</eff:CodeDescription>
+            </eff:VisitUrgency>
+            <!--Optional:-->
+            <eff:IsFirstVisit>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>iras ni faciat</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>verrantque per</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>metuens molemque</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>dare iussus habenas</eff:CodeDescription>
+            </eff:IsFirstVisit>
+            <!--Optional:-->
+            <!--type: string-->
+            <eff:PracticeType>tempestatesque sonoras imperio</eff:PracticeType>
+            <!--Optional:-->
+            <!--type: string-->
+            <eff:WorkTimeType>sceptra tenens mollitque</eff:WorkTimeType>
+            <!--Optional:-->
+            <!--type: string-->
+            <eff:FollowUpOrganisation>vasto rex</eff:FollowUpOrganisation>
+            <!--type: dateTime-->
+            <eff:StartDateTime>2011-01-01T07:47:44+02:00</eff:StartDateTime>
+            <!--Optional:-->
+            <!--type: dateTime-->
+            <eff:EndDateTime>2008-11-03T22:17:16</eff:EndDateTime>
+            <!--Optional:-->
+            <!--type: int-->
+            <eff:Duration>3</eff:Duration>
+            <!--Optional:-->
+            <eff:FollowUpCares>
+               <!--Zero or more repetitions:-->
+               <eff:Code>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetName>auras sed</eff:CodeSetName>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetId>aequora ventis illum</eff:CodeSetId>
+                  <!--type: string-->
+                  <eff:CodeValue>aequora ventis</eff:CodeValue>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeDescription>et coniunx</eff:CodeDescription>
+               </eff:Code>
+            </eff:FollowUpCares>
+            <!--Optional:-->
+            <eff:VisitReasons>
+               <!--Zero or more repetitions:-->
+               <eff:Code>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetName>incedo regina iovisque</eff:CodeSetName>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetId>hic vasto rex</eff:CodeSetId>
+                  <!--type: string-->
+                  <eff:CodeValue>ego quae</eff:CodeValue>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeDescription>tempestatesque sonoras</eff:CodeDescription>
+               </eff:Code>
+            </eff:VisitReasons>
+            <!--Optional:-->
+            <eff:ProcedureClasses>
+               <!--Zero or more repetitions:-->
+               <eff:Code>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetName>ego quae divum</eff:CodeSetName>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetId>aris imponet honorem</eff:CodeSetId>
+                  <!--type: string-->
+                  <eff:CodeValue>molemque et</eff:CodeValue>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeDescription>rapidum iaculata e</eff:CodeDescription>
+               </eff:Code>
+            </eff:ProcedureClasses>
+            <!--Optional:-->
+            <eff:ContentNotes>
+               <!--Zero or more repetitions:-->
+               <eff:ContentNote>
+                  <!--type: string-->
+                  <eff:Content>nimborum in</eff:Content>
+                  <!--type: int-->
+                  <eff:Amount>3</eff:Amount>
+               </eff:ContentNote>
+            </eff:ContentNotes>
+            <!--Optional:-->
+            <!--type: string-->
+            <eff:AdditionalData>altos imposuit regemque</eff:AdditionalData>
+         </tem:StatisticsData>
+         <!--Optional:-->
+         <tem:OpStatisticsData>
+            <!--Optional:-->
+            <eff1:Accidenttypes>
+               <!--Zero or more repetitions:-->
+               <eff:Code>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetName>aeoliam venit</eff:CodeSetName>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetId>hic vasto</eff:CodeSetId>
+                  <!--type: string-->
+                  <eff:CodeValue>et laxas</eff:CodeValue>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeDescription>carcere frenat</eff:CodeDescription>
+               </eff:Code>
+            </eff1:Accidenttypes>
+            <!--Optional:-->
+            <eff1:Diagnoses>
+               <!--Zero or more repetitions:-->
+               <eff:Diagnose>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Diagnose>A39.5</eff:Diagnose>
+               </eff:Diagnose>
+            </eff1:Diagnoses>
+            <!--Optional:-->
+            <eff1:ExternalCauses>
+               <!--Zero or more repetitions:-->
+               <eff:Code>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetName>maria ac</eff:CodeSetName>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeSetId>imponet honorem talia</eff:CodeSetId>
+                  <!--type: string-->
+                  <eff:CodeValue>numen iunonis</eff:CodeValue>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:CodeDescription>per auras</eff:CodeDescription>
+               </eff:Code>
+            </eff1:ExternalCauses>
+            <!--Optional:-->
+            <eff1:Procedures>
+               <!--Zero or more repetitions:-->
+               <eff:Procedure>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Procedure1>FM1AE</eff:Procedure1>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Procedure2>tempestatesque sonoras</eff:Procedure2>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Procedure3>ego quae</eff:Procedure3>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Procedure4>iaculata e nubibus</eff:Procedure4>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Medicine></eff:Medicine>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <eff:Side>M</eff:Side>
+               </eff:Procedure>
+            </eff1:Procedures>
+            <!--Optional:-->
+            <!--type: string-->
+            <eff1:ScheduleSlotID>34190E3B-4FEF-4F8A-81B0-6BD03A162615</eff1:ScheduleSlotID>
+            <!--Optional:-->
+            <eff1:Speciality>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetName>terras caelumque</eff:CodeSetName>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeSetId>et carcere</eff:CodeSetId>
+               <!--type: string-->
+               <eff:CodeValue>dare iussus</eff:CodeValue>
+               <!--Optional:-->
+               <!--type: string-->
+               <eff:CodeDescription>vasto rex aeolus</eff:CodeDescription>
+            </eff1:Speciality>
+         </tem:OpStatisticsData>
+      </tem:OperationStatisticsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

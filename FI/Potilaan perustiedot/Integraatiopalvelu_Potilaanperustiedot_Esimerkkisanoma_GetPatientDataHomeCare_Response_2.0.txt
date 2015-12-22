@@ -1,0 +1,277 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetPatientDataHomeCareResponse xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>Keksi</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <PatientsHomeCare xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PatientDataIntegration.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:PatientHomeCare>
+               <a:PatientId>
+                  <a:Identifier>090277-8601</a:Identifier>
+               </a:PatientId>
+               <a:SecurityBan>false</a:SecurityBan>
+               <a:FamilyName>Kissanen</a:FamilyName>
+               <a:GivenNames>Vadelma</a:GivenNames>
+               <a:DateOfDeath>0001-01-01T00:00:00</a:DateOfDeath>
+               <a:Profession>Laiskiainen</a:Profession>
+               <a:Sex>
+                  <a:CodeSetName>AR/YDIN - Sukupuoli</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.5.1.1997</a:CodeSetId>
+                  <a:CodeValue>2</a:CodeValue>
+                  <a:CodeDescription>Nainen</a:CodeDescription>
+               </a:Sex>
+               <a:Language>
+                  <a:CodeSetName>ISO639</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>fi</a:CodeValue>
+                  <a:CodeDescription>suomi</a:CodeDescription>
+               </a:Language>
+               <a:Nationality>
+                  <a:CodeSetName>ISO3166</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>246</a:CodeValue>
+                  <a:CodeDescription>Suomi</a:CodeDescription>
+               </a:Nationality>
+               <a:HomeCity>
+                  <a:CodeSetName>Kuntanumero</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>837</a:CodeValue>
+                  <a:CodeDescription>TAMPERE</a:CodeDescription>
+               </a:HomeCity>
+               <a:Addresses>
+                  <a:Address>
+                     <a:AddressType>PRIMARY</a:AddressType>
+                     <a:StreetAddress>Kissakuja 666</a:StreetAddress>
+                     <a:PostalCode>33210</a:PostalCode>
+                     <a:City>TAMPERE</a:City>
+                     <a:Country i:nil="true"/>
+                     <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                     <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                  </a:Address>
+                  <a:Address>
+                     <a:AddressType>OTHER</a:AddressType>
+                     <a:StreetAddress>mökkitie99</a:StreetAddress>
+                     <a:PostalCode>29350</a:PostalCode>
+                     <a:City>PALUS</a:City>
+                     <a:Country i:nil="true"/>
+                     <a:PeriodStart>2011-04-30T00:00:00</a:PeriodStart>
+                     <a:PeriodEnd>2011-08-30T00:00:00</a:PeriodEnd>
+                  </a:Address>
+               </a:Addresses>
+               <a:Telephones>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>MOBILE</a:TeleAddressType>
+                     <a:AddressValue>0458751255</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>HOME</a:TeleAddressType>
+                     <a:AddressValue>0325668955</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>OFFICE</a:TeleAddressType>
+                     <a:AddressValue>0402658754</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>OTHER</a:TeleAddressType>
+                     <a:AddressValue>0201258911</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>EMAIL</a:TeleAddressType>
+                     <a:AddressValue>kv@kissa.org</a:AddressValue>
+                  </a:TeleAddress>
+               </a:Telephones>
+               <a:RecidenceCity>
+                  <a:CodeSetName>Kuntanumero</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>837</a:CodeValue>
+                  <a:CodeDescription>TAMPERE</a:CodeDescription>
+               </a:RecidenceCity>
+               <a:BirthCity>
+                  <a:CodeSetName>Kuntanumero</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>293</a:CodeValue>
+                  <a:CodeDescription>KULLAA</a:CodeDescription>
+               </a:BirthCity>
+               <a:MaritalStatus>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:MaritalStatus>
+               <a:Permissions>
+                  <a:Permission>
+                     <a:PermissionType>MOBILE</a:PermissionType>
+                     <a:Allowed>true</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>HOME</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>OFFICE</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>OTHER</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>EMAIL</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+               </a:Permissions>
+               <a:LanguageOfErrand>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:LanguageOfErrand>
+               <a:LanguageOfInterpretation>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:LanguageOfInterpretation>
+               <a:NationalityOfBirth>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:NationalityOfBirth>
+               <a:PreviousFamilyName>Koiranen Vilma-Liisa</a:PreviousFamilyName>
+               <a:DCTConsent>
+                  <a:ConsentValid>true</a:ConsentValid>
+                  <a:StartDate>2013-09-20T08:21:37.007</a:StartDate>
+                  <a:EndDate>9999-12-31T23:59:59.9999999</a:EndDate>
+               </a:DCTConsent>
+               <a:NextOfKins>
+                  <a:NextOfKin>
+                     <a:PatientId>
+                        <a:Identifier>301173-KIS1</a:Identifier>
+                     </a:PatientId>
+                     <a:FamilyName>Kissanen</a:FamilyName>
+                     <a:GivenNames>Jaska Poika Ponteva</a:GivenNames>
+                     <a:Role>SPOUSE</a:Role>
+                     <a:Primary>false</a:Primary>
+                     <a:PatientAgent>false</a:PatientAgent>
+                     <a:Payer>false</a:Payer>
+                     <a:Language>
+                        <a:CodeSetName>ISO639</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>fi</a:CodeValue>
+                        <a:CodeDescription>suomi</a:CodeDescription>
+                     </a:Language>
+                     <a:Addresses>
+                        <a:Address>
+                           <a:AddressType>PRIMARY</a:AddressType>
+                           <a:StreetAddress>häntäpolku 666</a:StreetAddress>
+                           <a:PostalCode>33210</a:PostalCode>
+                           <a:City>TAMPERE</a:City>
+                           <a:Country i:nil="true"/>
+                           <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                           <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                        </a:Address>
+                     </a:Addresses>
+                     <a:Telephones>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>MOBILE</a:TeleAddressType>
+                           <a:AddressValue>0405887985</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>EMAIL</a:TeleAddressType>
+                           <a:AddressValue>jaska.kissa@kurmauskis.com</a:AddressValue>
+                        </a:TeleAddress>
+                     </a:Telephones>
+                     <a:PermissionForPatientData>false</a:PermissionForPatientData>
+                     <a:Notes/>
+                  </a:NextOfKin>
+               </a:NextOfKins>
+               <a:CarePersons>
+                  <a:CarePerson>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:Id>Doctor</a:Id>
+                        <a:FamilyName>Doctor</a:FamilyName>
+                        <a:GivenNames>Who</a:GivenNames>
+                        <a:Profession>Specialist</a:Profession>
+                     </a:Resource>
+                     <a:CareRealtionship>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>1</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:CareRealtionship>
+                     <a:FunctionType>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>52</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:FunctionType>
+                     <a:StartDate>2013-09-17T12:40:20.587</a:StartDate>
+                     <a:EndDate>0001-01-01T00:00:00</a:EndDate>
+                  </a:CarePerson>
+                  <a:CarePerson>
+                     <a:Resource>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:Id>PthHo</a:Id>
+                        <a:FamilyName>Pth</a:FamilyName>
+                        <a:GivenNames>Hoitaja</a:GivenNames>
+                        <a:Profession/>
+                     </a:Resource>
+                     <a:CareRealtionship>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>2</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:CareRealtionship>
+                     <a:FunctionType>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>52</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:FunctionType>
+                     <a:StartDate>2013-09-17T12:42:19.427</a:StartDate>
+                     <a:EndDate>0001-01-01T00:00:00</a:EndDate>
+                  </a:CarePerson>
+               </a:CarePersons>
+               <a:HomeCares>
+                  <a:HomeCare>
+                     <a:Function>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>kotih</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:Function>
+                     <a:Area>
+                        <a:CodeSetName>Effica/Lifecare</a:CodeSetName>
+                        <a:CodeSetId i:nil="true"/>
+                        <a:CodeValue>kkh</a:CodeValue>
+                        <a:CodeDescription i:nil="true"/>
+                     </a:Area>
+                     <a:TeamId>kesk</a:TeamId>
+                     <a:StartDate>2013-09-01T00:00:00</a:StartDate>
+                     <a:EndDate>0001-01-01T00:00:00</a:EndDate>
+                     <a:KeyCode>kkh1</a:KeyCode>
+                  </a:HomeCare>
+               </a:HomeCares>
+            </a:PatientHomeCare>
+         </PatientsHomeCare>
+      </GetPatientDataHomeCareResponse>
+   </s:Body>
+</s:Envelope>

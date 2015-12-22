@@ -1,0 +1,96 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <Esitiedot_Ulos_Response xmlns="urn:Tieto.HCW.EIS.Esitiedot.Contracts">
+         <AcknowledgeRequestStatus xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>gero et</a:MessageID>
+            <a:TransactionID>sonoras imperio</a:TransactionID>
+            <a:SenderID>per auras</a:SenderID>
+            <a:SenderApplication>circum claustra</a:SenderApplication>
+            <a:ReceiverID>quae divum incedo</a:ReceiverID>
+            <a:ReceiverApplication>verrantque per auras</a:ReceiverApplication>
+            <a:CharacterSet>nimborum in</a:CharacterSet>
+            <a:DataServiceURL>foedere certo</a:DataServiceURL>
+            <a:UserLanguageCode>profundum quippe ferant</a:UserLanguageCode>
+            <a:VersionNumber>et carcere</a:VersionNumber>
+         </MessageHeader>
+         <ContactR xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Esitiedot.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:PatientId>
+               <a:Identifier>123456-7890</a:Identifier>
+            </a:PatientId>
+            <a:Created>2013-04-17T14:06:47.8566635+03:00</a:Created>
+            <a:Finished>0001-01-01T00:00:00</a:Finished>
+            <a:FormsetCode>OTK01</a:FormsetCode>
+            <a:FormsetCodesystem>1.2.456.789.12.123</a:FormsetCodesystem>
+            <a:FormsetName>Opiskelijan testikysely</a:FormsetName>
+            <a:ContactId>24</a:ContactId>
+            <a:Organisation>ESPOO</a:Organisation>
+            <a:OrganisationOid>1.22.333.4444.55555.10</a:OrganisationOid>
+            <a:OrgUnit>1234S</a:OrgUnit>
+            <a:OrgUnitOid>1.22.333.4444.666666.9</a:OrgUnitOid>
+            <a:Severity>1</a:Severity>
+            <a:Status>FORMSET_RECEIVED</a:Status>
+            <a:Originator>3´rd party Oy</a:Originator>
+         </ContactR>
+         <ContactMetadata xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Esitiedot.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ContactMetadata>
+               <a:Key>&lt;Document_id></a:Key>
+               <a:Value>IMAGE12345.jpg</a:Value>
+            </a:ContactMetadata>
+         </ContactMetadata>
+         <Forms xmlns="http://tempuri.org/" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Esitiedot.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Form>
+               <a:FormCode>12</a:FormCode>
+               <a:FormCodeSystem>1.2.3.4.5.6000</a:FormCodeSystem>
+               <a:FormName>Asiakkaan tiedot</a:FormName>
+               <a:Order>1</a:Order>
+               <a:Severity>2</a:Severity>
+               <a:Questions>
+                  <a:Question>
+                     <a:QuestionCode>1</a:QuestionCode>
+                     <a:QuestionCodeSystem>1.2.3.4.2414</a:QuestionCodeSystem>
+                     <a:QuestionText>Testaustottumukset:</a:QuestionText>
+                     <a:Order>1</a:Order>
+                     <a:Language>FI-fi</a:Language>
+                     <a:Severity>1</a:Severity>
+                     <a:ParentQuestion/>
+                     <a:Answer i:nil="true"/>
+                  </a:Question>
+                  <a:Question>
+                     <a:QuestionCode>2</a:QuestionCode>
+                     <a:QuestionCodeSystem>1.2.3.4.2415</a:QuestionCodeSystem>
+                     <a:QuestionText>Testaatko ahkerasti?</a:QuestionText>
+                     <a:Order>1</a:Order>
+                     <a:Language>FI-fi</a:Language>
+                     <a:Severity>1</a:Severity>
+                     <a:ParentQuestion>1</a:ParentQuestion>
+                     <a:Answer>
+                        <a:AnswerCode>1</a:AnswerCode>
+                        <a:AnswerCodeSystem>1.2.55.4.2.5557</a:AnswerCodeSystem>
+                        <a:AnswerText>Aina kun ehdin!</a:AnswerText>
+                     </a:Answer>
+                  </a:Question>
+                  <a:Question>
+                     <a:QuestionCode>3</a:QuestionCode>
+                     <a:QuestionCodeSystem>1.2.3.4.2416</a:QuestionCodeSystem>
+                     <a:QuestionText>Oletko koodaaja?</a:QuestionText>
+                     <a:Order>1</a:Order>
+                     <a:Language>FI-fi</a:Language>
+                     <a:Severity>1</a:Severity>
+                     <a:ParentQuestion i:nil="true"/>
+                     <a:Answer>
+                        <a:AnswerCode>2</a:AnswerCode>
+                        <a:AnswerCodeSystem>2</a:AnswerCodeSystem>
+                        <a:AnswerText>Vain öisin</a:AnswerText>
+                     </a:Answer>
+                  </a:Question>
+               </a:Questions>
+            </a:Form>
+         </Forms>
+      </Esitiedot_Ulos_Response>
+   </s:Body>
+</s:Envelope>

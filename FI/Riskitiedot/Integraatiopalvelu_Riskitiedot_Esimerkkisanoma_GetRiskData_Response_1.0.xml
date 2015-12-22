@@ -1,0 +1,36 @@
+﻿<GetRiskDataResponse xmlns="urn:Tieto.HCW.EIS.RiskDataService.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.RiskDataService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.RiskDataService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>4545</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>44F</a:SenderID>
+            <a:SenderApplication>Effica</a:SenderApplication>
+            <a:ReceiverID>56G</a:ReceiverID>
+            <a:ReceiverApplication>TestiAPPL</a:ReceiverApplication>
+            <a:CharacterSet>UTF-8</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <RiskData xmlns="urn:Tieto.HCW.EIS.RiskDataService.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.RiskDataService.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:PatientId>
+               <a:Identifier>010101-HHH2</a:Identifier>
+            </a:PatientId>
+            <a:RiskText>KRIITTINEN
+		Moniresistentit mikrobit
+		Todettu (VRE)
+		Lääkeallergiat ja lääkereaktiot
+		Vakava lääkereaktio (T88.6#  puudutusaineet)
+		HOIDOSSA HUOMIOITAVA
+		Lääkeallergiat ja lääkereaktiot
+		Lääkehoidossa huomioitava
+		Lääkereaktio (D59.0#  sulfa)
+		Lääkereaktio, Vierasesineet, keinoelimet ja siirtoelimet,
+		Tekonivel (NFB30  vasen)</a:RiskText>
+            <a:RiskLevel>0</a:RiskLevel>
+         </RiskData>
+      </GetRiskDataResponse>

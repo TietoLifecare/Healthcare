@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Laboratory.DataContracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetLaboratoryDataRequest>
+         <!--Optional:-->
+         <tem:MessageHeader>
+            <!--Optional:-->
+            <tiet:MessageID>?</tiet:MessageID>
+            <!--Optional:-->
+            <tiet:TransactionID>?</tiet:TransactionID>
+            <!--Optional:-->
+            <tiet:SenderID>?</tiet:SenderID>
+            <!--Optional:-->
+            <tiet:SenderApplication>?</tiet:SenderApplication>
+            <tiet:ReceiverID>?</tiet:ReceiverID>
+            <!--Optional:-->
+            <tiet:ReceiverApplication>?</tiet:ReceiverApplication>
+            <!--Optional:-->
+            <tiet:CharacterSet>?</tiet:CharacterSet>
+            <!--Optional:-->
+            <tiet:DataServiceURL>?</tiet:DataServiceURL>
+            <!--Optional:-->
+            <tiet:UserLanguageCode>?</tiet:UserLanguageCode>
+            <!--Optional:-->
+            <tiet:VersionNumber>?</tiet:VersionNumber>
+         </tem:MessageHeader>
+         <!--Optional:-->
+         <tem:Common>
+            <!--Optional:-->
+            <tiet:ContractKey>yyy</tiet:ContractKey>
+            <!--Optional:-->
+            <tiet:UserId>tieto</tiet:UserId>
+            <!--Optional:-->
+            <tiet:CallingSystem>xxx</tiet:CallingSystem>
+            <!--Optional:-->
+            <tiet:CallingUserId>jaa</tiet:CallingUserId>
+         </tem:Common>
+         <!--Optional:-->
+         <tem:LaboratoryRequest>
+            <!--Optional:-->
+            <tiet1:Organisation>
+               <!--Optional:-->
+               <tiet1:CodeSetName>hoc metuens</tiet1:CodeSetName>
+               <!--Optional:-->
+               <tiet1:CodeSetId>ac vinclis</tiet1:CodeSetId>
+               <!--Optional:-->
+               <tiet1:CodeValue>speluncis abdidit</tiet1:CodeValue>
+               <!--Optional:-->
+               <tiet1:CodeDescription>aris imponet honorem</tiet1:CodeDescription>
+            </tiet1:Organisation>
+            <!--Optional:-->
+            <tiet1:Area>
+               <!--Optional:-->
+               <tiet1:CodeSetName>praeterea aut</tiet1:CodeSetName>
+               <!--Optional:-->
+               <tiet1:CodeSetId>claustra fremunt</tiet1:CodeSetId>
+               <!--Optional:-->
+               <tiet1:CodeValue>imperio premit</tiet1:CodeValue>
+               <!--Optional:-->
+               <tiet1:CodeDescription>quisquam numen</tiet1:CodeDescription>
+            </tiet1:Area>
+            <tiet1:PatientId>
+               <tiet1:Identifier>080808-A020</tiet1:Identifier>
+            </tiet1:PatientId>
+            <tiet1:EffectiveTime>
+               <tiet1:StartDateTime>2000-08-12T06:25:12.856Z</tiet1:StartDateTime>
+               <tiet1:EndDateTime>2014-08-12T06:25:12.856Z</tiet1:EndDateTime>
+            </tiet1:EffectiveTime>
+         </tem:LaboratoryRequest>
+      </tem:GetLaboratoryDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,26 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <CommonResponse xmlns="http://tempuri.org/">
+         <AcknowledgeRequestStatus xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>gero et</a:MessageID>
+            <a:TransactionID>sonoras imperio</a:TransactionID>
+            <a:SenderID>per auras</a:SenderID>
+            <a:SenderApplication>circum claustra</a:SenderApplication>
+            <a:ReceiverID>quae divum incedo</a:ReceiverID>
+            <a:ReceiverApplication>verrantque per auras</a:ReceiverApplication>
+            <a:CharacterSet>nimborum in</a:CharacterSet>
+            <a:DataServiceURL>foedere certo</a:DataServiceURL>
+            <a:UserLanguageCode>profundum quippe ferant</a:UserLanguageCode>
+            <a:VersionNumber>et carcere</a:VersionNumber>
+         </MessageHeader>
+         <StatisticsOperationData xmlns:a="http://schemas.datacontract.org/2004/07/Effica.Integrations.Statistics.Service.Contracts.Datacontracts.Common" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:StatisticsOperationCompleted>true</a:StatisticsOperationCompleted>
+         </StatisticsOperationData>
+      </CommonResponse>
+   </s:Body>
+</s:Envelope>

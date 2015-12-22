@@ -1,0 +1,60 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Tieto.HCW.EIS.Esitiedot.Contracts" xmlns:tem="http://tempuri.org/" xmlns:tiet="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:tiet1="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.Esitiedot.Contracts">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:Esitiedot_Ulos_Request>
+         <!--Optional:-->
+         <tem:MessageHeader>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:MessageID>gero et</tiet:MessageID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:TransactionID>sonoras imperio</tiet:TransactionID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:SenderID>quae divum incedo</tiet:SenderID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:SenderApplication>verrantque per auras</tiet:SenderApplication>
+            <!--type: string-->
+            <tiet:ReceiverID>per auras</tiet:ReceiverID>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:ReceiverApplication>circum claustra</tiet:ReceiverApplication>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CharacterSet>nimborum in</tiet:CharacterSet>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:DataServiceURL>foedere certo</tiet:DataServiceURL>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:UserLanguageCode>profundum quippe ferant</tiet:UserLanguageCode>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:VersionNumber>et carcere</tiet:VersionNumber>
+         </tem:MessageHeader>
+         <!--Optional:-->
+         <tem:Common>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:ContractKey>iovis rapidum iaculata</tiet:ContractKey>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:UserId>speluncis abdidit</tiet:UserId>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CallingSystem>bella gero et</tiet:CallingSystem>
+            <!--Optional:-->
+            <!--type: string-->
+            <tiet:CallingUserId>flammas turbine</tiet:CallingUserId>
+         </tem:Common>
+         <!--Optional:-->
+         <tem:ContactData>
+            <!--Optional:-->
+            <!--type: int-->
+            <tiet1:ContactId>3</tiet1:ContactId>
+         </tem:ContactData>
+      </urn:Esitiedot_Ulos_Request>
+   </soapenv:Body>
+</soapenv:Envelope>

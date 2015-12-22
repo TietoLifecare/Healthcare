@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetServiceEventData_Response xmlns="Lifecare.Integration.EPRDocumentService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID/>
+            <a:TransactionID/>
+            <a:SenderID/>
+            <a:SenderApplication/>
+            <a:ReceiverID/>
+            <a:ReceiverApplication/>
+            <a:CharacterSet/>
+            <a:DataServiceURL/>
+            <a:UserLanguageCode/>
+            <a:VersionNumber/>
+         </MessageHeader>
+         <ServiceEvents xmlns:a="Lifecare.Integration.EPRDocumentService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ServiceEventResp>
+               <a:ServiceEventId xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>1.2.246.10.19623654.10.1.14879.2015.123</b:CodeValue>
+                  <b:CodeDescription>Päivystyskäynti: 20.3.2015, Ppkl päivystyspoliklinikka, Sisätaudit</b:CodeDescription>
+               </a:ServiceEventId>
+               <a:StartDateTime>2015-03-20T08:46:00</a:StartDateTime>
+               <a:EndDateTime i:nil="true"/>
+               <a:Organisation xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>317</b:CodeValue>
+                  <b:CodeDescription>Testisairaala</b:CodeDescription>
+               </a:Organisation>
+               <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>3001Y</b:CodeValue>
+                  <b:CodeDescription>Ppkl päivystyspoliklinikka</b:CodeDescription>
+               </a:Area>
+               <a:PatientId>
+                  <a:Identifier>010101-0101</a:Identifier>
+               </a:PatientId>
+               <a:RegisterType xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>2</b:CodeValue>
+                  <b:CodeDescription>Julkinen terveydenhuolto</b:CodeDescription>
+               </a:RegisterType>
+               <a:IsSuggested>false</a:IsSuggested>
+            </a:ServiceEventResp>
+            <a:ServiceEventResp>
+               <a:ServiceEventId xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>1.2.246.10.19623654.10.1.14010.2013.123</b:CodeValue>
+                  <b:CodeDescription>Ajanvaraus/käynti</b:CodeDescription>
+               </a:ServiceEventId>
+               <a:StartDateTime>2013-06-25T13:34:00</a:StartDateTime>
+               <a:EndDateTime>2013-06-25T23:59:00</a:EndDateTime>
+               <a:Organisation xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>317</b:CodeValue>
+                  <b:CodeDescription>Testisairaala</b:CodeDescription>
+               </a:Organisation>
+               <a:Area xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>111</b:CodeValue>
+                  <b:CodeDescription>Testiosasto</b:CodeDescription>
+               </a:Area>
+               <a:PatientId>
+                  <a:Identifier>110856-9001</a:Identifier>
+               </a:PatientId>
+               <a:RegisterType xmlns:b="Lifecare.Integration.Common.Contracts">
+                  <b:CodeSetName>Effica/Lifecare</b:CodeSetName>
+                  <b:CodeSetId/>
+                  <b:CodeValue>2</b:CodeValue>
+                  <b:CodeDescription>Julkinen terveydenhuolto</b:CodeDescription>
+               </a:RegisterType>
+               <a:IsSuggested>false</a:IsSuggested>
+            </a:ServiceEventResp>
+         </ServiceEvents>
+      </GetServiceEventData_Response>
+   </s:Body>
+</s:Envelope>

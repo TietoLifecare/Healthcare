@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetMaternalCareData_Response xmlns="Lifecare.Integration.EPRDocumentService">
+         <AcknowledgeRequestStatus xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns:a="Lifecare.Integration.Common.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID/>
+            <a:TransactionID/>
+            <a:SenderID/>
+            <a:SenderApplication/>
+            <a:ReceiverID/>
+            <a:ReceiverApplication/>
+            <a:CharacterSet/>
+            <a:DataServiceURL/>
+            <a:UserLanguageCode/>
+            <a:VersionNumber/>
+         </MessageHeader>
+         <ContactsData xmlns:a="Lifecare.Integration.EPRDocumentService.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ContactData>
+               <a:PatientId>
+                  <a:Identifier>010101-0101</a:Identifier>
+               </a:PatientId>
+               <a:Organisation xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Area xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Form/>
+               <a:FunctionType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Function xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:ContactAuthor>
+                  <a:ContactDoctorCodeID/>
+                  <a:ContactDoctorCode/>
+               </a:ContactAuthor>
+               <a:DataState>F</a:DataState>
+               <a:CareprocesState>MAARITTAMATON_HOITOPROSESSIN_VAIHE</a:CareprocesState>
+               <a:ServiceEventId xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:ContactHeading>PreviousPregnancyInformation</a:ContactHeading>
+               <a:ContactRowsData>
+                  <a:ContactRowData>
+                     <a:HeadingName>Year</a:HeadingName>
+                     <a:Data>2011</a:Data>
+                     <a:SubContactRows>
+                        <a:ReturnValue>
+                           <a:Value i:type="a:PreviousPregnancyChildDetail">
+                              <a:ChildDetailsCode>A</a:ChildDetailsCode>
+                              <a:ChildDetailsEnding>Keskenmeno</a:ChildDetailsEnding>
+                           </a:Value>
+                        </a:ReturnValue>
+                     </a:SubContactRows>
+                  </a:ContactRowData>
+               </a:ContactRowsData>
+            </a:ContactData>
+            <a:ContactData>
+               <a:PatientId>
+                  <a:Identifier>010101-0101</a:Identifier>
+               </a:PatientId>
+               <a:VisitTime>2014-11-28T00:00:00</a:VisitTime>
+               <a:Organisation xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Area xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Form/>
+               <a:FunctionType xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Function xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:Speciality xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:ContactAuthor>
+                  <a:ContactDoctorCodeID>Testi Lääkäri</a:ContactDoctorCodeID>
+                  <a:ContactDoctorCode/>
+               </a:ContactAuthor>
+               <a:DataState>F</a:DataState>
+               <a:CareprocesState>MAARITTAMATON_HOITOPROSESSIN_VAIHE</a:CareprocesState>
+               <a:ServiceEventId xmlns:b="Lifecare.Integration.Common.Contracts"/>
+               <a:ContactHeading>PregnancyFollowUp</a:ContactHeading>
+               <a:ContactRowsData>
+                  <a:ContactRowData>
+                     <a:HeadingName>PregnancyWeek</a:HeadingName>
+                     <a:Data>38+6</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>Weight</a:HeadingName>
+                     <a:Data>51,00</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>HB</a:HeadingName>
+                     <a:Data>131</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>BloodPressure</a:HeadingName>
+                     <a:Data>80/120</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>Pulse</a:HeadingName>
+                     <a:Data>65</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FetusMovement</a:HeadingName>
+                     <a:Data>++</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FetusHeartSounds</a:HeadingName>
+                     <a:Data>++</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>FetusHeartRate</a:HeadingName>
+                     <a:Data>175</a:Data>
+                  </a:ContactRowData>
+                  <a:ContactRowData>
+                     <a:HeadingName>VisitType</a:HeadingName>
+                     <a:Data>Neuvola</a:Data>
+                  </a:ContactRowData>
+               </a:ContactRowsData>
+            </a:ContactData>
+         </ContactsData>
+      </GetMaternalCareData_Response>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,288 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetPatientDataResponse xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.ServiceContracts">
+         <AcknowledgeRequestStatus xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:HasOperationFailed>false</a:HasOperationFailed>
+            <a:ErrorType/>
+            <a:ErrorMessage/>
+         </AcknowledgeRequestStatus>
+         <MessageHeader xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.LISCommon" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:MessageID>?</a:MessageID>
+            <a:TransactionID>?</a:TransactionID>
+            <a:SenderID>Keksi</a:SenderID>
+            <a:SenderApplication>?</a:SenderApplication>
+            <a:ReceiverID>?</a:ReceiverID>
+            <a:ReceiverApplication>?</a:ReceiverApplication>
+            <a:CharacterSet>?</a:CharacterSet>
+            <a:DataServiceURL>?</a:DataServiceURL>
+            <a:UserLanguageCode>?</a:UserLanguageCode>
+            <a:VersionNumber>?</a:VersionNumber>
+         </MessageHeader>
+         <Patients xmlns="urn:Tieto.HCW.EIS.PatientDataIntegration.WCFService" xmlns:a="http://schemas.datacontract.org/2004/07/Tieto.HCW.EIS.PatientDataIntegration.DataContracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:Patient>
+               <a:PatientId>
+                  <a:Identifier>120566-A020</a:Identifier>
+               </a:PatientId>
+               <a:SecurityBan>false</a:SecurityBan>
+               <a:FamilyName>Satumaa</a:FamilyName>
+               <a:GivenNames>Sanni</a:GivenNames>
+               <a:DateOfDeath>0001-01-01T00:00:00</a:DateOfDeath>
+               <a:Profession>Luokanopettaja</a:Profession>
+               <a:Sex>
+                  <a:CodeSetName>AR/YDIN - Sukupuoli</a:CodeSetName>
+                  <a:CodeSetId>1.2.246.537.5.1.1997</a:CodeSetId>
+                  <a:CodeValue>2</a:CodeValue>
+                  <a:CodeDescription>Nainen</a:CodeDescription>
+               </a:Sex>
+               <a:Language>
+                  <a:CodeSetName>ISO639</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>fi</a:CodeValue>
+                  <a:CodeDescription>suomi</a:CodeDescription>
+               </a:Language>
+               <a:Nationality>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:Nationality>
+               <a:HomeCity>
+                  <a:CodeSetName>Kuntanumero</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>061</a:CodeValue>
+                  <a:CodeDescription>FORSSA</a:CodeDescription>
+               </a:HomeCity>
+               <a:Addresses>
+                  <a:Address>
+                     <a:AddressType>PRIMARY</a:AddressType>
+                     <a:StreetAddress>Puronmutka 8</a:StreetAddress>
+                     <a:PostalCode>90800</a:PostalCode>
+                     <a:City>OULU</a:City>
+                     <a:Country i:nil="true"/>
+                     <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                     <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                  </a:Address>
+                  <a:Address>
+                     <a:AddressType>OTHER</a:AddressType>
+                     <a:StreetAddress>Juoksupolku 88</a:StreetAddress>
+                     <a:PostalCode>77570</a:PostalCode>
+                     <a:City>JÄPPILÄ</a:City>
+                     <a:Country i:nil="true"/>
+                     <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                     <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                  </a:Address>
+                  <a:Address>
+                     <a:AddressType>ADDITIONAL</a:AddressType>
+                     <a:StreetAddress>Lisätie 28 A 5</a:StreetAddress>
+                     <a:PostalCode/>
+                     <a:City>78310</a:City>
+                     <a:Country i:nil="true"/>
+                     <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                     <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                  </a:Address>
+               </a:Addresses>
+               <a:Telephones>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>MOBILE</a:TeleAddressType>
+                     <a:AddressValue>04011112222</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>HOME</a:TeleAddressType>
+                     <a:AddressValue>071889900</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>OFFICE</a:TeleAddressType>
+                     <a:AddressValue>020111223</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>OTHER</a:TeleAddressType>
+                     <a:AddressValue>987654321</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>EMAIL</a:TeleAddressType>
+                     <a:AddressValue>jokunimi@gmail.com</a:AddressValue>
+                  </a:TeleAddress>
+                  <a:TeleAddress>
+                     <a:TeleAddressType>FAX</a:TeleAddressType>
+                     <a:AddressValue>ei.oo.com</a:AddressValue>
+                  </a:TeleAddress>
+               </a:Telephones>
+               <a:RecidenceCity>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:RecidenceCity>
+               <a:BirthCity>
+                  <a:CodeSetName>Kuntanumero</a:CodeSetName>
+                  <a:CodeSetId/>
+                  <a:CodeValue>072</a:CodeValue>
+                  <a:CodeDescription>HAILUOTO</a:CodeDescription>
+               </a:BirthCity>
+               <a:MaritalStatus>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:MaritalStatus>
+               <a:Permissions>
+                  <a:Permission>
+                     <a:PermissionType>MOBILE</a:PermissionType>
+                     <a:Allowed>true</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>HOME</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>OFFICE</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>OTHER</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>EMAIL</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+                  <a:Permission>
+                     <a:PermissionType>FAX</a:PermissionType>
+                     <a:Allowed>false</a:Allowed>
+                  </a:Permission>
+               </a:Permissions>
+               <a:LanguageOfErrand>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:LanguageOfErrand>
+               <a:LanguageOfInterpretation>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:LanguageOfInterpretation>
+               <a:NationalityOfBirth>
+                  <a:CodeSetName i:nil="true"/>
+                  <a:CodeSetId i:nil="true"/>
+                  <a:CodeValue i:nil="true"/>
+                  <a:CodeDescription i:nil="true"/>
+               </a:NationalityOfBirth>
+               <a:PreviousFamilyName>Testinen</a:PreviousFamilyName>
+               <a:DCTConsent>
+                  <a:ConsentValid>true</a:ConsentValid>
+                  <a:StartDate>2013-12-11T15:38:30.907</a:StartDate>
+                  <a:EndDate>9999-12-31T23:59:59.9999999</a:EndDate>
+               </a:DCTConsent>
+               <a:NextOfKins>
+                  <a:NextOfKin>
+                     <a:PatientId>
+                        <a:Identifier>150456-A010</a:Identifier>
+                     </a:PatientId>
+                     <a:FamilyName>Satumaa</a:FamilyName>
+                     <a:GivenNames>Santtu</a:GivenNames>
+                     <a:Role>SPOUSE</a:Role>
+                     <a:Primary>false</a:Primary>
+                     <a:PatientAgent>false</a:PatientAgent>
+                     <a:Payer>false</a:Payer>
+                     <a:Language>
+                        <a:CodeSetName>ISO639</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>fi</a:CodeValue>
+                        <a:CodeDescription>suomi</a:CodeDescription>
+                     </a:Language>
+                     <a:Addresses>
+                        <a:Address>
+                           <a:AddressType>PRIMARY</a:AddressType>
+                           <a:StreetAddress>Takapuro 6</a:StreetAddress>
+                           <a:PostalCode>90150</a:PostalCode>
+                           <a:City>OULU</a:City>
+                           <a:Country i:nil="true"/>
+                           <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                           <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                        </a:Address>
+                     </a:Addresses>
+                     <a:Telephones>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>MOBILE</a:TeleAddressType>
+                           <a:AddressValue>040997788</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>HOME</a:TeleAddressType>
+                           <a:AddressValue>444445555</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>OFFICE</a:TeleAddressType>
+                           <a:AddressValue>66667777</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>OTHER</a:TeleAddressType>
+                           <a:AddressValue>020876533</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>EMAIL</a:TeleAddressType>
+                           <a:AddressValue>santtu2@coldmail.com</a:AddressValue>
+                        </a:TeleAddress>
+                     </a:Telephones>
+                     <a:PermissionForPatientData>true</a:PermissionForPatientData>
+                     <a:Notes>Asuu eri osoitteessa kesäisin</a:Notes>
+                  </a:NextOfKin>
+                  <a:NextOfKin>
+                     <a:PatientId>
+                        <a:Identifier>090765-9019</a:Identifier>
+                     </a:PatientId>
+                     <a:FamilyName>Taimisto</a:FamilyName>
+                     <a:GivenNames>Mika</a:GivenNames>
+                     <a:Role>MENTOR</a:Role>
+                     <a:Primary>false</a:Primary>
+                     <a:PatientAgent>false</a:PatientAgent>
+                     <a:Payer>false</a:Payer>
+                     <a:Language>
+                        <a:CodeSetName>ISO639</a:CodeSetName>
+                        <a:CodeSetId/>
+                        <a:CodeValue>en</a:CodeValue>
+                        <a:CodeDescription>englanti</a:CodeDescription>
+                     </a:Language>
+                     <a:Addresses>
+                        <a:Address>
+                           <a:AddressType>PRIMARY</a:AddressType>
+                           <a:StreetAddress>Jossain A3</a:StreetAddress>
+                           <a:PostalCode>77770</a:PostalCode>
+                           <a:City>MYHINPÄÄ</a:City>
+                           <a:Country i:nil="true"/>
+                           <a:PeriodStart>0001-01-01T00:00:00</a:PeriodStart>
+                           <a:PeriodEnd>0001-01-01T00:00:00</a:PeriodEnd>
+                        </a:Address>
+                     </a:Addresses>
+                     <a:Telephones>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>MOBILE</a:TeleAddressType>
+                           <a:AddressValue>288888</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>HOME</a:TeleAddressType>
+                           <a:AddressValue>177777</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>OFFICE</a:TeleAddressType>
+                           <a:AddressValue>399999</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>OTHER</a:TeleAddressType>
+                           <a:AddressValue>400000</a:AddressValue>
+                        </a:TeleAddress>
+                        <a:TeleAddress>
+                           <a:TeleAddressType>EMAIL</a:TeleAddressType>
+                           <a:AddressValue>mika@jossain.fi</a:AddressValue>
+                        </a:TeleAddress>
+                     </a:Telephones>
+                     <a:PermissionForPatientData>true</a:PermissionForPatientData>
+                     <a:Notes>EU-johtajien budjettihuippukokous päätty</a:Notes>
+                  </a:NextOfKin>
+               </a:NextOfKins>
+            </a:Patient>
+         </Patients>
+      </GetPatientDataResponse>
+   </s:Body>
+</s:Envelope>
