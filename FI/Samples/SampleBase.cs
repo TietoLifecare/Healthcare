@@ -11,8 +11,8 @@ namespace LifecareAPI.Samples
     /// </summary>
     class SampleBase
     {
-        protected static string ContractKey = "";
+        protected static string ContractKey = "h4C55Ato!";
         protected static string UserId = "tieto";
-        protected static string CallingSystem = "TietoHack";               
+        protected static string CallingSystem = "HackathonAdmin";               
     }
 }
