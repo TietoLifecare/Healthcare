@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LifecareAPI.EPRDocUploadServiceReference;
+using System.Diagnostics;
+using WpfEPRTester.EPRDocUploadServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Patient record integration service - via this service the external system can transfer patient records into Lifecare.
+    /// Sample for interface versions 3.0 / 10.0
     /// </summary>
     class EPRSample : SampleBase
     {
@@ -26,27 +28,29 @@ namespace LifecareAPI.Samples
                 ReceiverApplication = "Effica",
                 CharacterSet = "UTF-16"
             };
-            
-            var common = new LisCommon()
+
+            var common = new CommonRequestData()
             {
                 ContractKey = ContractKey,
-                UserId = UserId,
                 CallingSystem = CallingSystem,
-                CallingUserId = UserId
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
+                UserIdentifiers = new UserIdentifier[] { new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId } },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
+                ReasonCode = new Code() { CodeSetName = "THL- Potilastietojen katselun erityinen syy 2012", CodeValue = "2" } // Coding system: http://91.202.112.142/codeserver/pages/code-list-page.xhtml?returnLink=1
             };
 
             var contact = new Contact()
             {
-                PatientId = new PatientId() { Identifier = "260116A901S" }, // 010101-0101
+                // 010100-A011 -- RID 1, ServiceEvent 1.2.246.10.19623654.10.1.14010.2013.947
+                // 010101-0101 -- ServiceEvent 1.2.246.10.19623654.10.3.14669.2015.87
+                PatientId = new PatientId() { Identifier = "010101-0101" }, 
                 VisitTime = DateTime.Now,
-                ContactAuthor = "tieto",
-                Organisation = "317",
-                OrgUnit = "kkh",
+                ContactAuthor = new UserIdentifier[] { new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId } },
+                Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
                 Form = "YLE",
-                Functionary = "kotih",
-                Speciality = "10",
+                Speciality = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "10" },
                 DataState = DataState.A,
-                CareprocesState = CareprocessState.TULOTILANNE,
+                CareProcesState = CareprocessState.TULOTILANNE,
                 ContactRows = new ContactRow[] { 
                         new EPRDocUploadServiceReference.ContactRow() { 
                             HeadingName = "Esitiedot", 
@@ -54,12 +58,38 @@ namespace LifecareAPI.Samples
                             Value = "Value",
                             Specifier = "Specifier II"
                         }
-                    }
+                    },
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },                
+                ServiceEvent = new Code() { CodeSetName = "OID", CodeValue = "1.2.246.10.19623654.10.3.14669.2015.87" } // Should be queried via service.GetServiceEventData                 
             };
 
-            var patient = new EPRDocUploadServiceReference.PatientId();
+            var serviceEventReq = new ServiceEventReq() 
+            {
+                 Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
+                 Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
+                 Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
+                 RegisterType = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2" },
+                 PatientId = new PatientId() { Identifier = "010101-0101" } 
+            };
 
-            service.InsertEPRData(ref header, common, contact, out patient);
+            // Structures for return data
+            var patient = new EPRDocUploadServiceReference.PatientId();
+            var guid = new Guid();
+            int row;
+            
+            var serviceEventRsp = new ServiceEventResp[100];
+            
+
+            try
+            {
+                service.GetServiceEventData(ref header, common, serviceEventReq, out serviceEventRsp);
+                service.InsertEPRData(ref header, common, contact, out patient, out guid, out row);
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e.Message);
+            }
 
             return 0;
         }

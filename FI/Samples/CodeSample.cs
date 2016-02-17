@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LifecareAPI.CodeServiceReference;
+using WpfEPRTester.CodeServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Code sets integration service - via this service the external system can request Lifecare’s internal code sets.

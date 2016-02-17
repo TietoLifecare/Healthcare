@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using LifecareAPI.ScheduleDataServiceReference;
+using WpfEPRTester.ScheduleDataServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Schedule data integration service supports following operations: 
@@ -23,7 +23,7 @@ namespace LifecareAPI.Samples
     {
         public static async Task<int> CallScheduleService()
         {
-            var service = new ScheduleIntegrServiceClient();
+            var service = new ScheduleDataServiceClient();
 
             var header = new MessageHeader()
             {
@@ -36,18 +36,20 @@ namespace LifecareAPI.Samples
                 CharacterSet = "UTF-16"
             };
 
-            var common = new LisCommon()
+            var common = new ScheduleDataServiceReference.CommonRequestData()
             {
                 ContractKey = ContractKey,
-                UserId = UserId,
                 CallingSystem = CallingSystem,
-                CallingUserId = UserId
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
+                UserIdentifiers = new UserIdentifier[] { new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId } },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
+                ReasonCode = new Code() { CodeSetName = "THL- Potilastietojen katselun erityinen syy 2012", CodeValue = "2" } // Coding system: http://91.202.112.142/codeserver/pages/code-list-page.xhtml?returnLink=1
             };
 
             // Initialize Request
             var req = new ScheduleReq() 
-            { 
-                ScheduleId = new Code(),
+            {
+                ScheduleId = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = UserId },
                 PatientId = new CustomerId() { Identifier="010101-0101" },
                 StartDateTime = DateTime.Now.AddDays(-1.0),
                 EndDateTime = DateTime.Now,

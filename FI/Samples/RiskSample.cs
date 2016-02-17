@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LifecareAPI.RiskDataServiceReference;
+using System.Diagnostics;
+using WpfEPRTester.RiskDataServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Risk data integration service - via this service the external system can request risk data from Lifecare’s risk register.
@@ -40,8 +41,15 @@ namespace LifecareAPI.Samples
 
             // Structure for return data
             var rsp = new RiskData();
-
-            service.GetRiskData(ref header, common, req, out rsp);
+            
+            try
+            {
+                service.GetRiskData(ref header, common, req, out rsp);
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e.Message);
+            }
 
             return 0;
         }

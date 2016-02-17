@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using WpfEPRTester.LaboratoryServiceReference;
+using WpfEPRTester.WardStatusServiceReference;
 
 namespace WpfEPRTester.Samples
 {
     /// <summary>
-    /// Laboratory data integration service - via this service the external system can request laboratory results entered in Lifecare.
+    /// Ward data integration service 
     /// </summary>
-    class LabSample : SampleBase
+    class WardSample : SampleBase
     {
-        public static async Task<int> CallLabService()
+        public static async Task<int> CallWardService()
         {
-            var service = new LaboratoryServiceClient();
+            var service = new WardStatusServiceClient();
 
             var header = new MessageHeader()
             {
@@ -33,25 +33,24 @@ namespace WpfEPRTester.Samples
                 ContractKey = ContractKey,
                 UserId = UserId,
                 CallingSystem = CallingSystem,
-                CallingUserId = UserId                 
+                CallingUserId = UserId
             };
 
             // Initialize Request
-            var req = new LaboratoryRequest()
+            var req = new WardReq() 
             {
-                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
-                Organisation = new Code { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
-                PatientId = new PatientId() { Identifier = "010101-0101" },
-                EffectiveTime = new EffectiveTime() { StartDateTime = DateTime.Now.AddDays(-365.0), EndDateTime = DateTime.Now }                 
+                Collection = "K", // K - Everything, M - Changes after given Timestamp
+                Timestamp = DateTime.Now.AddDays(-365.0),
+                Hospital = "317", // Hospital ID
+                Ward = "2102Y" // Ward ID                 
             };
 
             // Structure for return data
-            var rsp1 = new PatientId();
-            var rsp2 = new LaboratoryResult[100];
-            
+            var rsp = new WardStatus();
+
             try
             {
-                service.GetPatientLaboratoryResults(ref header, common, req, out rsp1, out rsp2);
+                service.GetPaikkatilanne(ref header, common, req, out rsp);
             }
             catch (Exception e)
             {

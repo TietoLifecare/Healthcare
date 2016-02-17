@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using WpfEPRTester.LaboratoryServiceReference;
+using WpfEPRTester.DiagnosisServiceReference;
 
 namespace WpfEPRTester.Samples
 {
     /// <summary>
-    /// Laboratory data integration service - via this service the external system can request laboratory results entered in Lifecare.
+    /// Risk data integration service - via this service the external system can request risk data from Lifecare’s risk register.
     /// </summary>
-    class LabSample : SampleBase
+    class DiagnosisSample : SampleBase
     {
-        public static async Task<int> CallLabService()
+        public static async Task<int> CallDiagnosisService()
         {
-            var service = new LaboratoryServiceClient();
+            var service = new DiagnosisServiceClient();
 
             var header = new MessageHeader()
             {
@@ -33,25 +33,25 @@ namespace WpfEPRTester.Samples
                 ContractKey = ContractKey,
                 UserId = UserId,
                 CallingSystem = CallingSystem,
-                CallingUserId = UserId                 
+                CallingUserId = UserId
             };
 
             // Initialize Request
-            var req = new LaboratoryRequest()
+            var req = new DiagnosisReq()
             {
+                Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
                 Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
-                Organisation = new Code { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
-                PatientId = new PatientId() { Identifier = "010101-0101" },
-                EffectiveTime = new EffectiveTime() { StartDateTime = DateTime.Now.AddDays(-365.0), EndDateTime = DateTime.Now }                 
+                EffectiveTime = new EffectiveTime() { StartDateTime = DateTime.Now.AddDays(-365.0), EndDateTime = DateTime.Now },
+                PatientId = new PatientId() { Identifier = "010101-0101" }
             };
 
-            // Structure for return data
-            var rsp1 = new PatientId();
-            var rsp2 = new LaboratoryResult[100];
+            // Structure for return data     
+            var patientId = new PatientId();
+            var diagnoses = new Diagnose[100];
             
             try
             {
-                service.GetPatientLaboratoryResults(ref header, common, req, out rsp1, out rsp2);
+                service.GetPatientDiagnoses(ref header, common, req, out patientId, out diagnoses);
             }
             catch (Exception e)
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Shared information for all Lifecare API calls

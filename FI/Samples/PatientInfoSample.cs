@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LifecareAPI.PatientDataServiceReference;
+using WpfEPRTester.PatientDataServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Patient demographic data integration service supports following operations:

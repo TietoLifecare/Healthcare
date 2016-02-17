@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LifecareAPI.MedicationServiceReference;
+using System.Diagnostics;
+using WpfEPRTester.MedicationServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Medication data integration service - via this service the external system can request open care medication (home medication) entered in Lifecare.
@@ -42,9 +43,17 @@ namespace LifecareAPI.Samples
                 PatientId = new PatientId() { Identifier="010101-0101" }
             };
 
+            // Structures for return data
             var patientMedication = new PatientMedication[1];
 
-            service.GetOpenCareMedicationData(ref header, common, medicationReq, out patientMedication);
+            try
+            {
+                service.GetOpenCareMedicationData(ref header, common, medicationReq, out patientMedication);
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e.Message);
+            }
 
             return 0;
         }

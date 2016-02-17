@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using LifecareAPI.StatisticsServiceReference;
+using WpfEPRTester.StatisticsServiceReference;
 
-namespace LifecareAPI.Samples
+namespace WpfEPRTester.Samples
 {
     /// <summary>
     /// Statistics data integration service - via this service the external system submit patient’s statistical events (visits) to Lifecare.
