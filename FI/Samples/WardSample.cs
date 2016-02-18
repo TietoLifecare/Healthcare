@@ -39,7 +39,7 @@ namespace WpfEPRTester.Samples
             // Initialize Request
             var req = new WardReq() 
             {
-                Collection = "K", // K - Everything, M - Changes after given Timestamp
+                Collection = "M", // M - Changes after given Timestamp,  K - Everything
                 Timestamp = DateTime.Now.AddDays(-365.0),
                 Hospital = "317", // Hospital ID
                 Ward = "2102Y" // Ward ID                 

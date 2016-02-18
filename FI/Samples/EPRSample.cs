@@ -33,9 +33,9 @@ namespace WpfEPRTester.Samples
             {
                 ContractKey = ContractKey,
                 CallingSystem = CallingSystem,
-                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2103Y" },
                 UserIdentifiers = new UserIdentifier[] { new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId } },
-                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "esh" },
                 ReasonCode = new Code() { CodeSetName = "THL- Potilastietojen katselun erityinen syy 2012", CodeValue = "2" } // Coding system: http://91.202.112.142/codeserver/pages/code-list-page.xhtml?returnLink=1
             };
 
@@ -43,7 +43,8 @@ namespace WpfEPRTester.Samples
             {
                 // 010100-A011 -- RID 1, ServiceEvent 1.2.246.10.19623654.10.1.14010.2013.947
                 // 010101-0101 -- ServiceEvent 1.2.246.10.19623654.10.3.14669.2015.87
-                PatientId = new PatientId() { Identifier = "010101-0101" }, 
+                // 030303-0303 -- 1.2.246.10.19623654.10.1.14013.2015.1447
+                PatientId = new PatientId() { Identifier = "030303-0303" }, 
                 VisitTime = DateTime.Now,
                 ContactAuthor = new UserIdentifier[] { new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId } },
                 Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
@@ -59,18 +60,18 @@ namespace WpfEPRTester.Samples
                             Specifier = "Specifier II"
                         }
                     },
-                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
-                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },                
-                ServiceEvent = new Code() { CodeSetName = "OID", CodeValue = "1.2.246.10.19623654.10.3.14669.2015.87" } // Should be queried via service.GetServiceEventData                 
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2103Y" },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "esh" },
+                ServiceEvent = new Code() { CodeSetName = "OID", CodeValue = "1.2.246.10.19623654.10.1.14013.2015.1447" } // Should be queried via service.GetServiceEventData                 
             };
 
             var serviceEventReq = new ServiceEventReq() 
             {
-                 Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kkh" },
-                 Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
+                 Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2103Y" },
+                 Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "esh" },
                  Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
                  RegisterType = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2" },
-                 PatientId = new PatientId() { Identifier = "010101-0101" } 
+                 PatientId = new PatientId() { Identifier = "030303-0303" }                  
             };
 
             // Structures for return data
