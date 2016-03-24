@@ -1,0 +1,13 @@
+https://lifecarehack.tieto.com/AnamnesisDataService/EsitiedotService.svc
+https://lifecarehack.tieto.com/PatientDemographicsService/PatientDataService.svc
+https://lifecarehack.tieto.com/ScheduleDataService/ScheduleDataService.svc
+https://lifecarehack.tieto.com/CodeDataService/CodeServiceIntegration.svc
+https://lifecarehack.tieto.com/DiagnosisService/DiagnosisService.svc
+https://lifecarehack.tieto.com/LaboratoryService/LaboratoryService.svc
+https://lifecarehack.tieto.com/MedicationService/MedicationService.svc
+https://lifecarehack.tieto.com/PatientRecordService/EPRDocUploadService.svc
+https://lifecarehack.tieto.com/RiskDataService/RiskDataIntegrationService.svc
+https://lifecarehack.tieto.com/StatisticsDataService/StatisticsService.svc
+https://lifecarehack.tieto.com/WardStatusService/PatientTransfersService.svc
+https://lifecarehack.tieto.com/WardStatusService/RavaPointsService.svc
+https://lifecarehack.tieto.com/WardStatusService/WardStatusService.svc
