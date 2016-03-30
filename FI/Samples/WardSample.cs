@@ -40,9 +40,9 @@ namespace WpfEPRTester.Samples
             var req = new WardReq() 
             {
                 Collection = "M", // M - Changes after given Timestamp,  K - Everything
-                Timestamp = DateTime.Now.AddDays(-365.0),
+                Timestamp = DateTime.Now.AddDays(-30.0),
                 Hospital = "317", // Hospital ID
-                Ward = "2102Y" // Ward ID                 
+                Ward = "1111T" // Ward ID                 
             };
 
             // Structure for return data

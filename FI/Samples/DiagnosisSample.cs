@@ -42,7 +42,7 @@ namespace WpfEPRTester.Samples
                 Organisation = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "317" },
                 Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "kotih" },
                 EffectiveTime = new EffectiveTime() { StartDateTime = DateTime.Now.AddDays(-365.0), EndDateTime = DateTime.Now },
-                PatientId = new PatientId() { Identifier = "010101-0101" }
+                PatientId = new PatientId() { Identifier = "121221-A020" }
             };
 
             // Structure for return data     

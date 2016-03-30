@@ -50,11 +50,28 @@ namespace WpfEPRTester.Samples
             var req = new ScheduleReq() 
             {
                 ScheduleId = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = UserId },
-                PatientId = new CustomerId() { Identifier="010101-0101" },
-                StartDateTime = DateTime.Now.AddDays(-1.0),
-                EndDateTime = DateTime.Now,
+                PatientId = new CustomerId() { Identifier="010101-0101" }, 
+                StartDateTime = DateTime.Parse("2015-12-01"),
+                EndDateTime = DateTime.Parse("2015-12-31"),
                 StatusCode = StatusCode.Unknown,
                 RequestType = RequestType.All
+            };
+
+            var newAppointmentReq = new NewAppointment()
+            {
+                ScheduleId = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = UserId },
+                Function = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "esh" },
+                Area = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "2103Y" },
+                AppointmentType = new Code() { CodeSetName = "Effica/Lifecare", CodeValue = "TMP" },
+                CustomerId = new CustomerId() { Identifier = "030303-0303" },
+                Resource = new UserIdentifier[] 
+                { 
+                    new UserIdentifier() { UserIdentifierCodeId = UserIdentifierCodeId.EFFICA_USER_ID, UserIdentifierCode = UserId }
+                },
+                StartDateTime = DateTime.Now,
+                EndDateTime = DateTime.Now.AddMinutes(10.0),
+                Duration = 10,
+                AdditionalData = "Additional Data"                
             };
 
             // Structure for return data
@@ -63,6 +80,7 @@ namespace WpfEPRTester.Samples
             try
             {
                 service.GetScheduleCommonData(ref header, common, req, out rsp);
+                service.NewAppointment(ref header, common, newAppointmentReq);
             }
             catch (Exception e)
             {
